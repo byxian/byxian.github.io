@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0004.png">
 <meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0005.png">
 <meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0006.png">
-<meta property="og:updated_time" content="2017-05-08T14:43:26.293Z">
+<meta property="og:updated_time" content="2017-05-09T16:35:34.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyBatis Generate使用介绍">
 <meta name="twitter:description" content="参考文档：http://mbg.cndocs.tk/  新项目一般都会涉及到数据模型的代码封装工作，一般在进行物理模型出来以后就生成数据表时，需要封装ORM数据层，Hibernate我主要使用JBoss Tools，而Mybatis我使用的是MBG。 此处主要介绍如何将数据库反向工程为项目中的数据层，主要包括model,dao,xml。">
@@ -205,9 +205,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0000.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0000.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure>
 <p>MyBatis Generator (MBG) 可以通过以下方式运行：</p>
 <ul>
@@ -221,46 +221,46 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0001.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0001.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure>
 <h6 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h6><p>创建xml配置文件（xml配置参考<a href="http://mbg.cndocs.tk/configreference/xmlconfig.html" target="_blank" rel="external">http://mbg.cndocs.tk/configreference/xmlconfig.html</a>）</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0002.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0002.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure>
 <p>主要配置参数我做如下简单介绍，详情参考文档：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">classPathEntry为数据库驱动jar包路径</div><div class="line">jdbcConnection为数据库连接信息</div><div class="line">javaModelGenerator配置的是代码model层</div><div class="line">sqlMapGenerator配置的是代码xml层</div><div class="line">javaClientGenerator配置的是代码dao层</div><div class="line">table配置的是需要反向的表列表：</div><div class="line">  tableName数据库表的名称(不包括schema或catalog)。这个元素是&lt;context&gt;元素的一个至少存在一个的必选子元素。 您可以指定不限制数量的table元素。如果需要，指定的值可以包含SQL通配符（通配符参见http://www.w3school.com.cn/sql/sql_wildcards.asp）。</div></pre></td></tr></table></figure></p>
 <p>我的工具项目结构:<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0003.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0003.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure></p>
 <h6 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h6><p>使用maven执行任务。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0004.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0004.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0005.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0005.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure>
 <h6 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h6><p>生成代码如下（当然一些配置需要完善，后续有空余时间会研究一下xml文件的参数配置）：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0006.png" alt="image" title="">
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0006.png" alt="" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption"></div>
             </figure></p>
 <p><a href="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/WorkTileMBG.zip" target="_blank" rel="external">demo下载参考</a></p>
 
@@ -270,7 +270,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-05-08T14:43:26.293Z" itemprop="dateUpdated">2017年5月8日 22:43</time>
+    最后更新时间：<time datetime="2017-05-09T16:35:34.448Z" itemprop="dateUpdated">2017年5月10日 0:35</time>
 </span><br>
 
 
@@ -345,7 +345,7 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/05/09/20170509/" id="post-prev" class="post-nav-link">
+      <a href="/2017/05/08/20170509/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">Hexo Github Page配置简介</h4>
       </a>
