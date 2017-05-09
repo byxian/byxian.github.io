@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>MyBatis Generate使用介绍 | Xian&#39;s Blog | 见贤思齐焉，见不贤而内自省也。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="参考文档：http://mbg.cndocs.tk/  新项目一般都会涉及到数据模型的代码封装工作，一般在进行物理模型出来以后就生成数据表时，需要封装ORM数据层，Hibernate我主要使用JBoss Tools，而Mybatis我使用的是MBG。 此处主要介绍如何将数据库反向工程为项目中的数据层，主要包括model,dao,xml。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MyBatis Generate使用介绍">
+<meta property="og:url" content="http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/index.html">
+<meta property="og:site_name" content="Xian&#39;s Blog">
+<meta property="og:description" content="参考文档：http://mbg.cndocs.tk/  新项目一般都会涉及到数据模型的代码封装工作，一般在进行物理模型出来以后就生成数据表时，需要封装ORM数据层，Hibernate我主要使用JBoss Tools，而Mybatis我使用的是MBG。 此处主要介绍如何将数据库反向工程为项目中的数据层，主要包括model,dao,xml。">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0000.png">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0001.png">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0002.png">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0003.png">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0004.png">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0005.png">
+<meta property="og:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0006.png">
+<meta property="og:updated_time" content="2017-05-08T14:43:26.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MyBatis Generate使用介绍">
+<meta name="twitter:description" content="参考文档：http://mbg.cndocs.tk/  新项目一般都会涉及到数据模型的代码封装工作，一般在进行物理模型出来以后就生成数据表时，需要封装ORM数据层，Hibernate我主要使用JBoss Tools，而Mybatis我使用的是MBG。 此处主要介绍如何将数据库反向工程为项目中的数据层，主要包括model,dao,xml。">
+<meta name="twitter:image" content="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0000.png">
+    
+        <link rel="alternative" href="/atom.xml" title="Xian&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Xian</h5>
+          <a href="mailto:imxian@aliyun.com" title="imxian@aliyun.com" class="mail">imxian@aliyun.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/byxian" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/5269810767" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">MyBatis Generate使用介绍</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">MyBatis Generate使用介绍</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-23T14:00:00.000Z" itemprop="datePublished" class="page-time">
+  2017-04-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#第一步"><span class="post-toc-number">1.</span> <span class="post-toc-text">第一步</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#第二步"><span class="post-toc-number">2.</span> <span class="post-toc-text">第二步</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#第三步"><span class="post-toc-number">3.</span> <span class="post-toc-text">第三步</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#最后"><span class="post-toc-number">4.</span> <span class="post-toc-text">最后</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-MyBatis Generate使用介绍"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">MyBatis Generate使用介绍</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月23日 22:00" datetime="2017-04-23T14:00:00.000Z"  itemprop="datePublished">2017-04-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>参考文档：<a href="http://mbg.cndocs.tk/" target="_blank" rel="external">http://mbg.cndocs.tk/</a></p>
+</blockquote>
+<p>新项目一般都会涉及到数据模型的代码封装工作，一般在进行物理模型出来以后就生成数据表时，需要封装ORM数据层，Hibernate我主要使用JBoss Tools，而Mybatis我使用的是MBG。</p>
+<p>此处主要介绍如何将数据库反向工程为项目中的数据层，主要包括model,dao,xml。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0000.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<p>MyBatis Generator (MBG) 可以通过以下方式运行：</p>
+<ul>
+<li>从 <a href="http://mbg.cndocs.tk/running/runningFromCmdLine.html" target="_blank" rel="external">命令提示符</a> 使用 XML 配置文件</li>
+<li>作为 <a href="http://mbg.cndocs.tk/running/runningWithAnt.html" target="_blank" rel="external">Ant 任务</a> 使用 XML 配置文件</li>
+<li>作为 <a href="http://mbg.cndocs.tk/running/runningWithMaven.html" target="_blank" rel="external">Maven Plugin</a></li>
+<li>从另一个 <a href="http://mbg.cndocs.tk/running/runningWithJava.html" target="_blank" rel="external">Java 程序</a> 使用 XML 配置文件</li>
+</ul>
+<p>此处我用的是Maven Plugin作为运行方式。</p>
+<h6 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h6><p>编写pom.xml(参考<a href="http://mbg.cndocs.tk/running/runningWithMaven.html" target="_blank" rel="external">http://mbg.cndocs.tk/running/runningWithMaven.html</a>）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0001.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<h6 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h6><p>创建xml配置文件（xml配置参考<a href="http://mbg.cndocs.tk/configreference/xmlconfig.html" target="_blank" rel="external">http://mbg.cndocs.tk/configreference/xmlconfig.html</a>）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0002.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<p>主要配置参数我做如下简单介绍，详情参考文档：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">classPathEntry为数据库驱动jar包路径</div><div class="line">jdbcConnection为数据库连接信息</div><div class="line">javaModelGenerator配置的是代码model层</div><div class="line">sqlMapGenerator配置的是代码xml层</div><div class="line">javaClientGenerator配置的是代码dao层</div><div class="line">table配置的是需要反向的表列表：</div><div class="line">  tableName数据库表的名称(不包括schema或catalog)。这个元素是&lt;context&gt;元素的一个至少存在一个的必选子元素。 您可以指定不限制数量的table元素。如果需要，指定的值可以包含SQL通配符（通配符参见http://www.w3school.com.cn/sql/sql_wildcards.asp）。</div></pre></td></tr></table></figure></p>
+<p>我的工具项目结构:<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0003.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure></p>
+<h6 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h6><p>使用maven执行任务。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0004.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0005.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<h6 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h6><p>生成代码如下（当然一些配置需要完善，后续有空余时间会研究一下xml文件的参数配置）：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0006.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure></p>
+<p><a href="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/WorkTileMBG.zip" target="_blank" rel="external">demo下载参考</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-05-08T14:43:26.293Z" itemprop="dateUpdated">2017年5月8日 22:43</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/04/23/MyBatis Generate使用介绍/" target="_blank" rel="external">http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/</a>
+    </div>
+    <footer>
+        <a href="http://www.imxian.cn">
+            <img src="/img/avatar.jpg" alt="Xian">
+            Xian
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/&title=《MyBatis Generate使用介绍》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/&title=《MyBatis Generate使用介绍》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MyBatis Generate使用介绍》 — Xian's Blog&url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/05/09/20170509/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hexo Github Page配置简介</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/20/技术人员为什么要写博客？/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">技术人员为什么要写博客？</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Xian's Blog &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/&title=《MyBatis Generate使用介绍》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/&title=《MyBatis Generate使用介绍》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MyBatis Generate使用介绍》 — Xian's Blog&url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHElEQVR42u3aS27jQAwFQN//0pltgIyF90h44e7SylAEi+UFw0+/XvH18+t6d//vtfmG1ycuDAyMr2Ukofz9/PzK/PnkvREVAwPjAkYSSpLlnp/P82QeGwYGBkZCaku6JJVjYGBgzBh52m1LPQwMDIyE0b5+n3w3bAwMjNsY+2Luc58/st/AwMD4KsZPeW3Kwf3b374FAwPjaMZshdlmv80iIV+UYmBg3MBoR2z7AdnznbwNxsDAuIeRhJsM9xNkPlBLRnsYGBhnM54fnY3g28XAZlKIgYFxA2M2oG+PR7Rr0dlQDwMD42xGmwpX4/tRsh4es8DAwDiO0R7kSpDJN29C/899DAyMoxn7INqVQN5CJ0sFDAyMUxmzZUAe4mYkVyw4MTAwjmbk460c0ybNttCMfggMDIyDGJthfVtKtuuHItFjYGAczUhCmR3kaheTqz0GBgbGNYx2PbBvTdsmNloGYGBgHMpIms827c7Ku01JioGBcTajbS/bwdlsCZqUjBgYGLcxkiD2Q/y8Va7LRAwMjKMZ7XGHDSwPvU3QGBgYpzJmI/52AZAg20Lw7X8MDAyM4xj7NWdO2i8P9skaAwPjexmzJDtrU2eHOZ5TNgYGxj2M4eYzaDJnhWPdi2NgYGAshvvPd9pEPDythoGBcRljlnDbEjD5OTAwMG5jbJrYWZmY/zUa22FgYBzNyAPaDMvaFreNBAMD41DGP4AS1izNeLAFAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
