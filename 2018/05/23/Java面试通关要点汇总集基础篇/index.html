@@ -1,28 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Xian&#39;s Blog</title>
-  <subtitle>见贤思齐焉，见不贤而内自省也。</subtitle>
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="http://www.imxian.cn/"/>
-  <updated>2018-05-23T16:05:57.669Z</updated>
-  <id>http://www.imxian.cn/</id>
-  
-  <author>
-    <name>Xian</name>
+<!DOCTYPE html>
+<html>
+<head>
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Java面试通关要点汇总集基础篇</title>
-    <link href="http://www.imxian.cn/2018/05/23/Java%E9%9D%A2%E8%AF%95%E9%80%9A%E5%85%B3%E8%A6%81%E7%82%B9%E6%B1%87%E6%80%BB%E9%9B%86%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
-    <id>http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/</id>
-    <published>2018-05-23T14:00:00.000Z</published>
-    <updated>2018-05-23T16:05:57.669Z</updated>
+
     
-    <content type="html"><![CDATA[<blockquote>
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Java面试通关要点汇总集基础篇 | Xian&#39;s Blog | 见贤思齐焉，见不贤而内自省也。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="参考文档：http://www.spring4all.com/article/917  基础篇基本功面向对象的特征123456789面向对象的三个基本特征是：封装、继承、多态。封装封装最好理解了。封装是面向对象的特征之一，是对象和类概念的主要特性。封装，也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。继承面向对象编程 (OOP) 语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试通关要点汇总集基础篇">
+<meta property="og:url" content="http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/index.html">
+<meta property="og:site_name" content="Xian&#39;s Blog">
+<meta property="og:description" content="参考文档：http://www.spring4all.com/article/917  基础篇基本功面向对象的特征123456789面向对象的三个基本特征是：封装、继承、多态。封装封装最好理解了。封装是面向对象的特征之一，是对象和类概念的主要特性。封装，也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。继承面向对象编程 (OOP) 语言">
+<meta property="og:updated_time" content="2018-05-23T16:05:57.669Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java面试通关要点汇总集基础篇">
+<meta name="twitter:description" content="参考文档：http://www.spring4all.com/article/917  基础篇基本功面向对象的特征123456789面向对象的三个基本特征是：封装、继承、多态。封装封装最好理解了。封装是面向对象的特征之一，是对象和类概念的主要特性。封装，也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。继承面向对象编程 (OOP) 语言">
+    
+        <link rel="alternative" href="/atom.xml" title="Xian&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Xian</h5>
+          <a href="mailto:imxian@aliyun.com" title="imxian@aliyun.com" class="mail">imxian@aliyun.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/byxian" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/5269810767" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java面试通关要点汇总集基础篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java面试通关要点汇总集基础篇</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-23T14:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-05-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">基础篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本功"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基本功</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#面向对象的特征"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">面向对象的特征</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#final-finally-finalize-的区别"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">final, finally, finalize 的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#int-和-Integer-有什么区别"><span class="post-toc-number">1.1.0.3.</span> <span class="post-toc-text">int 和 Integer 有什么区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#重载和重写的区别"><span class="post-toc-number">1.1.0.4.</span> <span class="post-toc-text">重载和重写的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#抽象类和接口有什么区别"><span class="post-toc-number">1.1.0.5.</span> <span class="post-toc-text">抽象类和接口有什么区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说反射的用途及实现"><span class="post-toc-number">1.1.0.6.</span> <span class="post-toc-text">说说反射的用途及实现</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说自定义注解的场景及实现"><span class="post-toc-number">1.1.0.7.</span> <span class="post-toc-text">说说自定义注解的场景及实现</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HTTP-请求的-GET-与-POST-方式的区别"><span class="post-toc-number">1.1.0.8.</span> <span class="post-toc-text">HTTP 请求的 GET 与 POST 方式的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#session-与-cookie-区别"><span class="post-toc-number">1.1.0.9.</span> <span class="post-toc-text">session 与 cookie 区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#session-分布式处理"><span class="post-toc-number">1.1.0.10.</span> <span class="post-toc-text">session 分布式处理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#JDBC-流程"><span class="post-toc-number">1.1.0.11.</span> <span class="post-toc-text">JDBC 流程</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MVC-设计思想"><span class="post-toc-number">1.1.0.12.</span> <span class="post-toc-text">MVC 设计思想</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#equals-与-的区别"><span class="post-toc-number">1.1.0.13.</span> <span class="post-toc-text">equals 与 == 的区别</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#集合"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">集合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#List-和-Set-区别"><span class="post-toc-number">1.2.0.1.</span> <span class="post-toc-text">List 和 Set 区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Arraylist-与-LinkedList-区别"><span class="post-toc-number">1.2.0.2.</span> <span class="post-toc-text">Arraylist 与 LinkedList 区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ArrayList-与-Vector-区别"><span class="post-toc-number">1.2.0.3.</span> <span class="post-toc-text">ArrayList 与 Vector 区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HashMap-和-Hashtable-的区别"><span class="post-toc-number">1.2.0.4.</span> <span class="post-toc-text">HashMap 和 Hashtable 的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HashSet-和-HashMap-区别"><span class="post-toc-number">1.2.0.5.</span> <span class="post-toc-text">HashSet 和 HashMap 区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HashMap-和-ConcurrentHashMap-的区别"><span class="post-toc-number">1.2.0.6.</span> <span class="post-toc-text">HashMap 和 ConcurrentHashMap 的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HashMap-的工作原理及代码实现"><span class="post-toc-number">1.2.0.7.</span> <span class="post-toc-text">HashMap 的工作原理及代码实现</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ConcurrentHashMap-的工作原理及代码实现"><span class="post-toc-number">1.2.0.8.</span> <span class="post-toc-text">ConcurrentHashMap 的工作原理及代码实现</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">线程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#创建线程的方式及实现"><span class="post-toc-number">1.3.0.1.</span> <span class="post-toc-text">创建线程的方式及实现</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sleep-、join（）、yield（）有什么区别"><span class="post-toc-number">1.3.0.2.</span> <span class="post-toc-text">sleep() 、join（）、yield（）有什么区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-CountDownLatch-原理"><span class="post-toc-number">1.3.0.3.</span> <span class="post-toc-text">说说 CountDownLatch 原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-CyclicBarrier-原理"><span class="post-toc-number">1.3.0.4.</span> <span class="post-toc-text">说说 CyclicBarrier 原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-Semaphore-原理"><span class="post-toc-number">1.3.0.5.</span> <span class="post-toc-text">说说 Semaphore 原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-Exchanger-原理"><span class="post-toc-number">1.3.0.6.</span> <span class="post-toc-text">说说 Exchanger 原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-CountDownLatch-与-CyclicBarrier-区别"><span class="post-toc-number">1.3.0.7.</span> <span class="post-toc-text">说说 CountDownLatch 与 CyclicBarrier 区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ThreadLocal-原理分析"><span class="post-toc-number">1.3.0.8.</span> <span class="post-toc-text">ThreadLocal 原理分析</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#讲讲线程池的实现原理"><span class="post-toc-number">1.3.0.9.</span> <span class="post-toc-text">讲讲线程池的实现原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#线程池的几种方式"><span class="post-toc-number">1.3.0.10.</span> <span class="post-toc-text">线程池的几种方式</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#线程的生命周期"><span class="post-toc-number">1.3.0.11.</span> <span class="post-toc-text">线程的生命周期</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#锁机制"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">锁机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说线程安全问题"><span class="post-toc-number">1.4.0.1.</span> <span class="post-toc-text">说说线程安全问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#volatile-实现原理"><span class="post-toc-number">1.4.0.2.</span> <span class="post-toc-text">volatile 实现原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#synchronize-实现原理"><span class="post-toc-number">1.4.0.3.</span> <span class="post-toc-text">synchronize 实现原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#synchronized-与-lock-的区别"><span class="post-toc-number">1.4.0.4.</span> <span class="post-toc-text">synchronized 与 lock 的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#CAS-乐观锁"><span class="post-toc-number">1.4.0.5.</span> <span class="post-toc-text">CAS 乐观锁</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ABA-问题"><span class="post-toc-number">1.4.0.6.</span> <span class="post-toc-text">ABA 问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#乐观锁的业务场景及实现方式"><span class="post-toc-number">1.4.0.7.</span> <span class="post-toc-text">乐观锁的业务场景及实现方式</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Java面试通关要点汇总集基础篇"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java面试通关要点汇总集基础篇</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018年05月23日 22:00" datetime="2018-05-23T14:00:00.000Z"  itemprop="datePublished">2018-05-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
 <p>参考文档：<a href="http://www.spring4all.com/article/917" target="_blank" rel="external">http://www.spring4all.com/article/917</a></p>
 </blockquote>
 <h2 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h2><h3 id="基本功"><a href="#基本功" class="headerlink" title="基本功"></a>基本功</h3><h5 id="面向对象的特征"><a href="#面向对象的特征" class="headerlink" title="面向对象的特征"></a>面向对象的特征</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">面向对象的三个基本特征是：封装、继承、多态。</div><div class="line">封装</div><div class="line">封装最好理解了。封装是面向对象的特征之一，是对象和类概念的主要特性。</div><div class="line">封装，也就是把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。</div><div class="line">继承</div><div class="line">面向对象编程 (OOP) 语言的一个主要功能就是“继承”。继承是指这样一种能力：它可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。</div><div class="line">多态</div><div class="line">多态性（polymorphisn）是允许你将父对象设置成为和一个或更多的他的子对象相等的技术，赋值之后，父对象就可以根据当前赋值给它的子对象的特性以不同的方式运作。简单的说，就是一句话：允许将子类类型的指针赋值给父类类型的指针。</div><div class="line">实现多态，有二种方式，覆盖，重载。</div></pre></td></tr></table></figure>
@@ -147,261 +314,228 @@
 <h5 id="synchronized-与-lock-的区别"><a href="#synchronized-与-lock-的区别" class="headerlink" title="synchronized 与 lock 的区别"></a>synchronized 与 lock 的区别</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">一、synchronized和lock的用法区别</div><div class="line">（1）synchronized(隐式锁)：在需要同步的对象中加入此控制，synchronized可以加在方法上，也可以加在特定代码块中，括号中表示需要锁的对象。</div><div class="line">（2）lock（显示锁）：需要显示指定起始位置和终止位置。一般使用ReentrantLock类做为锁，多个线程中必须要使用一个ReentrantLock类做为对 象才能保证锁的生效。且在加锁和解锁处需要通过lock()和unlock()显示指出。所以一般会在finally块中写unlock()以防死锁。</div><div class="line">二、synchronized和lock性能区别</div><div class="line">synchronized是托管给JVM执行的，而lock是java写的控制锁的代码。在Java1.5中，synchronize是性能低效的。因为 这是一个重量级操作，需要调用操作接口，导致有可能加锁消耗的系统时间比加锁以外的操作还多。相比之下使用Java提供的Lock对象，性能更高一些。但 是到了Java1.6，发生了变化。synchronize在语义上很清晰，可以进行很多优化，有适应自旋，锁消除，锁粗化，轻量级锁，偏向锁等等。导致 在Java1.6上synchronize的性能并不比Lock差。</div><div class="line">三、synchronized和lock机制区别</div><div class="line">（1）synchronized原始采用的是CPU悲观锁机制，即线程获得的是独占锁。独占锁意味着其 他线程只能依靠阻塞来等待线程释放锁。</div><div class="line">（2）Lock用的是乐观锁方式。所谓乐观锁就是，每次不加锁而是假设没有冲突而去完成某项操作，如果因为冲突失败就重试，直到成功为止。乐观锁实现的机制就 是CAS操作（Compare and Swap）。</div></pre></td></tr></table></figure>
 <h5 id="CAS-乐观锁"><a href="#CAS-乐观锁" class="headerlink" title="CAS 乐观锁"></a>CAS 乐观锁</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CAS是项乐观锁技术，当多个线程尝试使用CAS同时更新同一个变量时，只有其中一个线程能更新变量的值，而其它线程都失败，失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次尝试。</div><div class="line">CAS 操作包含三个操作数 —— 内存位置（V）、预期原值（A）和新值(B)。如果内存位置的值与预期原值相匹配，那么处理器会自动将该位置值更新为新值。否则，处理器不做任何操作。无论哪种情况，它都会在 CAS 指令之前返回该位置的值。（在 CAS 的一些特殊情况下将仅返回 CAS 是否成功，而不提取当前值。）CAS 有效地说明了“我认为位置 V 应该包含值 A；如果包含该值，则将 B 放到这个位置；否则，不要更改该位置，只告诉我这个位置现在的值即可。”这其实和乐观锁的冲突检查+数据更新的原理是一样的。</div></pre></td></tr></table></figure>
 <h5 id="ABA-问题"><a href="#ABA-问题" class="headerlink" title="ABA 问题"></a>ABA 问题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CAS会导致“ABA问题”。</div><div class="line">CAS算法实现一个重要前提需要取出内存中某时刻的数据，而在下时刻比较并替换，那么在这个时间差类会导致数据的变化。</div><div class="line">比如说一个线程one从内存位置V中取出A，这时候另一个线程two也从内存中取出A，并且two进行了一些操作变成了B，然后two又将V位置的数据变成A，这时候线程one进行CAS操作发现内存中仍然是A，然后one操作成功。尽管线程one的CAS操作成功，但是不代表这个过程就是没有问题的。</div><div class="line">部分乐观锁的实现是通过版本号（version）的方式来解决ABA问题，乐观锁每次在执行数据的修改操作时，都会带上一个版本号，一旦版本号和数据的版本号一致就可以执行修改操作并对版本号执行+1操作，否则就执行失败。因为每次操作的版本号都会随之增加，所以不会出现ABA问题，因为版本号只会增加不会减少。</div></pre></td></tr></table></figure>
-<h5 id="乐观锁的业务场景及实现方式"><a href="#乐观锁的业务场景及实现方式" class="headerlink" title="乐观锁的业务场景及实现方式"></a>乐观锁的业务场景及实现方式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">乐观锁（Optimistic Lock）：</div><div class="line">每次获取数据的时候，都不会担心数据被修改，所以每次获取数据的时候都不会进行加锁，但是在更新数据的时候需要判断该数据是否被别人修改过。如果数据被其他线程修改，则不进行数据更新，如果数据没有被其他线程修改，则进行数据更新。由于数据没有进行加锁，期间该数据可以被其他线程进行读写操作。</div><div class="line">比较适合读取操作比较频繁的场景，如果出现大量的写入操作，数据发生冲突的可能性就会增大，为了保证数据的一致性，应用层需要不断的重新获取数据，这样会增加大量的查询操作，降低了系统的吞吐量。</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;参考文档：&lt;a href=&quot;http://www.spring4all.com/article/917&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.spring4all.com/article/917&lt;/a
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Github Page配置简介</title>
-    <link href="http://www.imxian.cn/2017/05/08/20170509/"/>
-    <id>http://www.imxian.cn/2017/05/08/20170509/</id>
-    <published>2017-05-08T14:00:00.000Z</published>
-    <updated>2017-05-09T16:34:45.783Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>参考：<br><a href="https://sfantasy.gitbooks.io/node-in-action/content/zh/" target="_blank" rel="external">https://sfantasy.gitbooks.io/node-in-action/content/zh/</a><br><a href="http://git.oschina.net/oschina/git-osc/wikis/%E5%B8%AE%E5%8A%A9#ssh-keys" target="_blank" rel="external">http://git.oschina.net/oschina/git-osc/wikis/%E5%B8%AE%E5%8A%A9#ssh-keys</a><br><a href="https://github.com/yscoder/hexo-theme-indigo/wiki/%E5%AE%89%E8%A3%85" target="_blank" rel="external">https://github.com/yscoder/hexo-theme-indigo/wiki/%E5%AE%89%E8%A3%85</a><br><a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a>   </p>
+<h5 id="乐观锁的业务场景及实现方式"><a href="#乐观锁的业务场景及实现方式" class="headerlink" title="乐观锁的业务场景及实现方式"></a>乐观锁的业务场景及实现方式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">乐观锁（Optimistic Lock）：</div><div class="line">每次获取数据的时候，都不会担心数据被修改，所以每次获取数据的时候都不会进行加锁，但是在更新数据的时候需要判断该数据是否被别人修改过。如果数据被其他线程修改，则不进行数据更新，如果数据没有被其他线程修改，则进行数据更新。由于数据没有进行加锁，期间该数据可以被其他线程进行读写操作。</div><div class="line">比较适合读取操作比较频繁的场景，如果出现大量的写入操作，数据发生冲突的可能性就会增大，为了保证数据的一致性，应用层需要不断的重新获取数据，这样会增加大量的查询操作，降低了系统的吞吐量。</div></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-23T16:05:57.669Z" itemprop="dateUpdated">2018年5月24日 0:05</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2018/05/23/Java面试通关要点汇总集基础篇/" target="_blank" rel="external">http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/</a>
+    </div>
+    <footer>
+        <a href="http://www.imxian.cn">
+            <img src="/img/avatar.jpg" alt="Xian">
+            Xian
+        </a>
+    </footer>
 </blockquote>
-<p>最近换了一个新机器，所以软件环境需要重新配置例如博客的配置，所以做一个基本的记录，方便日后参考。   </p>
-<h5 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h5><p>安装 Node.js 的最佳方式是使用 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>。<br>cURL:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://raw.github.com/creationix/nvm/master/install.sh | sh</div></pre></td></tr></table></figure></p>
-<p>Wget:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</div></pre></td></tr></table></figure></p>
-<p>安装完成后，重启终端并执行下列命令即可安装 Node.js。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvm install 4</div></pre></td></tr></table></figure></p>
-<p>或者您也可以下载 <a href="http://nodejs.org/" target="_blank" rel="external">安装程序</a> 来安装。</p>
-<h5 id="2-npm配置"><a href="#2-npm配置" class="headerlink" title="2. npm配置"></a>2. npm配置</h5><p>npm，一般认为是 Node Package Manager 的缩写，鉴于 npm在国内会受到 GFW 的影响，可以选择使用 <a href="https://npm.taobao.org/" target="_blank" rel="external">Taonpm</a> 作为 npm 的镜像，方便安装 npm 中的模块。   </p>
-<h6 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
-<h6 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h6><p>从 registry.npm.taobao.org 安装所有模块. 当安装的时候发现安装的模块还没有同步过来, 淘宝 NPM 会自动在后台进行同步, 并且会让你从官方 NPM registry.npmjs.org 进行安装. 下次你再安装这个模块的时候, 就会直接从 淘宝 NPM 安装了.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cnpm install [name]</div></pre></td></tr></table></figure></p>
-<h5 id="3-Hexo安装"><a href="#3-Hexo安装" class="headerlink" title="3. Hexo安装"></a>3. Hexo安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cnpm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ cd blog</div><div class="line">$ cnpm install</div><div class="line">$ hexo generate</div><div class="line">$ hexo clean</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<h5 id="4-Git配置"><a href="#4-Git配置" class="headerlink" title="4. Git配置"></a>4. Git配置</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># 用户名</div><div class="line">git config --global user.name &quot;你的名字&quot;</div><div class="line"># email</div><div class="line">git config --global user.email &quot;你的Email&quot;</div><div class="line"># 生成SSH Keys</div><div class="line">ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;# Creates a new ssh key using the provided email</div><div class="line"></div><div class="line"># 获取公钥，并复制到公有git库（github,gitoschina,alicode等）</div><div class="line">cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<h5 id="5-Hexo配置"><a href="#5-Hexo配置" class="headerlink" title="5.Hexo配置"></a>5.Hexo配置</h5><p>安装主题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">cd themes</div><div class="line">git clone git@github.com:yscoder/hexo-theme-indigo.git themes/indigo</div></pre></td></tr></table></figure></p>
-<p>针对每个主题做具体的配置不赘述。修改Hexo目录下的_config.yml配置文件中的theme属性，将其设置为indigo。然后本地预览：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
-<h5 id="6-关联Github-Pages"><a href="#6-关联Github-Pages" class="headerlink" title="6. 关联Github Pages"></a>6. 关联Github Pages</h5><p>注册一个github的帐号，创建一个仓库，仓库的名称为username/username.github.io，具体创建过程详见：<a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a>。<br>修改配置文件_config.xml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/byxian/byxian.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>然后发布项目到github上面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
-<p>有常用的域名可以顺带配置一下。在域名管理中对选定的域名进行解析，记录类型为CNAME,记录值为<strong>byxian.github.io</strong>。然后hexo的source中添加CNAME文件，里面填写域名，重新部署即可实现域名访问。</p>
-<p><img src="http://global.bing.com/az/hprichbg/rb/TaihangMountains_EN-US6666930369_800x480.jpg" alt=""> </p>
-]]></content>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
     
-    <summary type="html">
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/&title=《Java面试通关要点汇总集基础篇》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/&title=《Java面试通关要点汇总集基础篇》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试通关要点汇总集基础篇》 — Xian's Blog&url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
     
-      &lt;blockquote&gt;
-&lt;p&gt;参考：&lt;br&gt;&lt;a href=&quot;https://sfantasy.gitbooks.io/node-in-action/content/zh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://sfantasy.git
-    
-    </summary>
-    
-    
-  </entry>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
-  <entry>
-    <title>MyBatis Generate使用介绍</title>
-    <link href="http://www.imxian.cn/2017/04/23/MyBatis%20Generate%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://www.imxian.cn/2017/04/23/MyBatis Generate使用介绍/</id>
-    <published>2017-04-23T14:00:00.000Z</published>
-    <updated>2017-05-09T16:35:34.448Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>参考文档：<a href="http://mbg.cndocs.tk/" target="_blank" rel="external">http://mbg.cndocs.tk/</a></p>
-</blockquote>
-<p>新项目一般都会涉及到数据模型的代码封装工作，一般在进行物理模型出来以后就生成数据表时，需要封装ORM数据层，Hibernate我主要使用JBoss Tools，而Mybatis我使用的是MBG。</p>
-<p>此处主要介绍如何将数据库反向工程为项目中的数据层，主要包括model,dao,xml。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0000.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>MyBatis Generator (MBG) 可以通过以下方式运行：</p>
-<ul>
-<li>从 <a href="http://mbg.cndocs.tk/running/runningFromCmdLine.html" target="_blank" rel="external">命令提示符</a> 使用 XML 配置文件</li>
-<li>作为 <a href="http://mbg.cndocs.tk/running/runningWithAnt.html" target="_blank" rel="external">Ant 任务</a> 使用 XML 配置文件</li>
-<li>作为 <a href="http://mbg.cndocs.tk/running/runningWithMaven.html" target="_blank" rel="external">Maven Plugin</a></li>
-<li>从另一个 <a href="http://mbg.cndocs.tk/running/runningWithJava.html" target="_blank" rel="external">Java 程序</a> 使用 XML 配置文件</li>
-</ul>
-<p>此处我用的是Maven Plugin作为运行方式。</p>
-<h6 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h6><p>编写pom.xml(参考<a href="http://mbg.cndocs.tk/running/runningWithMaven.html" target="_blank" rel="external">http://mbg.cndocs.tk/running/runningWithMaven.html</a>）</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0001.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<h6 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h6><p>创建xml配置文件（xml配置参考<a href="http://mbg.cndocs.tk/configreference/xmlconfig.html" target="_blank" rel="external">http://mbg.cndocs.tk/configreference/xmlconfig.html</a>）</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0002.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<p>主要配置参数我做如下简单介绍，详情参考文档：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">classPathEntry为数据库驱动jar包路径</div><div class="line">jdbcConnection为数据库连接信息</div><div class="line">javaModelGenerator配置的是代码model层</div><div class="line">sqlMapGenerator配置的是代码xml层</div><div class="line">javaClientGenerator配置的是代码dao层</div><div class="line">table配置的是需要反向的表列表：</div><div class="line">  tableName数据库表的名称(不包括schema或catalog)。这个元素是&lt;context&gt;元素的一个至少存在一个的必选子元素。 您可以指定不限制数量的table元素。如果需要，指定的值可以包含SQL通配符（通配符参见http://www.w3school.com.cn/sql/sql_wildcards.asp）。</div></pre></td></tr></table></figure></p>
-<p>我的工具项目结构:<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0003.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<h6 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h6><p>使用maven执行任务。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0004.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0005.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-<h6 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h6><p>生成代码如下（当然一些配置需要完善，后续有空余时间会研究一下xml文件的参数配置）：<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/20170423_0006.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<p><a href="http://imxian-bucket.oss-cn-shanghai.aliyuncs.com/20170423/WorkTileMBG.zip" target="_blank" rel="external">demo下载参考</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;参考文档：&lt;a href=&quot;http://mbg.cndocs.tk/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mbg.cndocs.tk/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;新项目一般都会涉及
-    
-    </summary>
-    
-    
-  </entry>
+
   
-  <entry>
-    <title>技术人员为什么要写博客？</title>
-    <link href="http://www.imxian.cn/2017/04/20/%E6%8A%80%E6%9C%AF%E4%BA%BA%E5%91%98%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E5%8D%9A%E5%AE%A2%EF%BC%9F/"/>
-    <id>http://www.imxian.cn/2017/04/20/技术人员为什么要写博客？/</id>
-    <published>2017-04-20T14:00:00.000Z</published>
-    <updated>2017-05-08T14:43:26.294Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>来源：Zery zhang 的博客 www.cnblogs.com/zery/p/3343893.html</p>
-</blockquote>
-<p>本文只代表个人见解，不代表任立场，如果您认为我的想法是错的那很正常，因为这是我的想法，如果您觉得您的想法和我一样，那我们就是传说中的 “激友”（对生活冲满激情的朋友）。   </p>
-<h6 id="一、我心中的博客"><a href="#一、我心中的博客" class="headerlink" title="一、我心中的博客"></a>一、我心中的博客</h6><p>我所以指的写博客，不单只是写一篇文章出来这一结果。而应该是写的这一过程，写过技术文章的朋友应该跟我一样有这么一个过程。   </p>
-<ol>
-<li>自己了解学习，文章所涉及到的知识点，及知识点衍生出来的知识点。</li>
-<li>对学习的知识点进行验证，以确保理论值与实践值保持一致。</li>
-<li>动手写，写完后再次检查校正并排版，然后发表。</li>
-<li>针对网友的评论中提出的问题进行回复。</li>
-</ol>
-<p>我写文章一般都会经历以上5上步，最终以上5步融合成一个结果那就是”一篇文章” 这一过程也是我心中对的”写博客”一词的诠释</p>
-<h6 id="二、为什么要写博客"><a href="#二、为什么要写博客" class="headerlink" title="二、为什么要写博客"></a>二、为什么要写博客</h6><h6 id="为自己"><a href="#为自己" class="headerlink" title="为自己"></a>为自己</h6><p>写博客对自己的提升是很大的，可能写一篇体现不出来，但是只要你坚持写效果就很明显，好处人个认为有以下几点：   </p>
-<p><strong>强化知识点：</strong> 在写一篇文章前，你必定是要把以文章中心为主的知识点及衍生的知识点都详细了解一篇，在这一过程中必须会涉及到自己以前所了解过的知识，人的记忆是存在记忆曲线的需要不断的重复记忆才能长久的记住某一事物，而每写一篇文章时都会查阅资料，在这一过程中必然会遇到以前记住了而现在渐渐淡忘的知识点，当你再次看到时瞬间就会回想起，此时以前的知识点就得到了强化。   </p>
-<p><strong>提升学习能力：</strong> 同一样的人，了解同一知识点，用不同的方法，产生的结果必然会不一样，找到最佳的学习方法，这也是一种能力，这种能力是经过多次实践探索之后总结出来的，以前我每次需了解某一种技术时都会先百度看各种搜索结果，发现没有想要的之后，再Google因为Google的结果与百度的会有所不同，Google结果中国外的文章相对会多一点，而偶然点了一个链接进入了博客园，发现就是自己想要的东西，而且把概念，代码，及经验都写上去了，看完之后对我帮助很大。   </p>
-<p>渐渐的我便开始采这种方法了解新知识概念性的直接看百度百科，实质性的直接 上博客园的 找找看 ，群里的朋友还推荐了一种方法，比如我要学MVC 园子里很多人都写了 关于MVC的一系列文章，把那一系列的文章都看一遍，对于MVC就基本有了了解了，这便是学习能力的提升,对于某种技术用最短的时间做到了比较全面的了解</p>
-<p><strong>提升文字组织能力：</strong> 这个就不用说了，写博客，既然是写，就必然会有大量的文字，而如何组织文字表达出自己想表达的意思，是长期练习的，而写博客正好帮助你提高了你的文字组织能力。   </p>
-<p><strong>提升逻辑思维能力：</strong> 不用说，技术性的东西从来就没的单独存在的，都一层层技术相结合，那在了解某种技术时，自己的思维也是要顺着这种关系逐渐深入的，比如MVC，你不能只知道 M是什么V是什么 C是什么就行了吧，你得知道 M V C 这三者关系是怎样的，又是怎样交互，而你了解之后再把它写出来时，需要清晰逻辑。   </p>
-<h6 id="为他人"><a href="#为他人" class="headerlink" title="为他人"></a>为他人</h6><p><strong>有意的：</strong><br>园子里有很多人都写过关于 MVC 框架 WCF 等等系列文章，目的就在于帮助新人快速上手，这个我深有体会，当初我开始学习MVC时就是看的T2噬菌体的MVC系列文章，整篇看完后再配合自己动手对于MVC就有了基本的了解了，在次感谢园子里无私献的大牛们。而以上行为就是有意的帮助。</p>
-<p><strong>无意的：</strong><br>很多时候在开发项目的过程中，遇到了技术问题，花了时间解决后，有人会写博客记录，并附上解决方法旨在当再次遇到问题时直接看下文章就知道如何处理了，而碰巧的是，这种问题不止他一个人遇到了。很多人在开发时也遇到了这个问题，在网上找答案时，就找到了这篇文章，并根据文章提供的解决方法，顺利的解决了问题，这种帮助就是无意的帮助。</p>
-<h6 id="三、一定要写博客吗"><a href="#三、一定要写博客吗" class="headerlink" title="三、一定要写博客吗"></a>三、一定要写博客吗</h6><p>古人云：一份耕耘，一份收获。</p>
-<p>以下这些是帮助他人而得到的一些认可，并非主观上去追求的。  </p>
-<p><strong>MVP：</strong><br>微软每年都颁发MVP给那些经常与其他专业人士分享知识和专业技能，受人尊敬、信任，而且平易近人的专家。而这个称号则是对你写的博客质量的肯定。</p>
-<p><strong>知名度：</strong><br>文章写得好的人，技术水平肯定也很好，知道的人多了，知名度就有了，比如园子里排名前10的大家都知道，都看过他们的文章。</p>
-<p><strong>尊敬：</strong><br>对于技术界的大神，都是受人敬仰的，在园子里或者工作中也是一样的，在心里对大神们都是默默的佩服！至少我是这样啦，哈哈~也是我学习的榜样！</p>
-<h6 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h6><p>我所认的写博客是对自己所了解知识的强化，分享，自身能力的提升。当然 写 博客只是一种方法而以，只要能达到提升自我的效果什么方法都是可以的。</p>
-<p>之前有看过一篇文章：《即便没有读者，你也要写博客》 ，其中也讲解了很多写博客的好处。</p>
-<p>而我写博客是希望，能提升自己的综合能力，并把自己的知识与经验分享给大家，如果有幸我的分享帮助了一些人，那将使我更加欣慰。</p>
-<p>最后附上一句名言：有些事情你现在不去做，可能以后都不会有机会了！</p>
-<p>注：我代表不了大家，所以以上观点只代表我个人。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;来源：Zery zhang 的博客 www.cnblogs.com/zery/p/3343893.html&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;本文只代表个人见解，不代表任立场，如果您认为我的想法是错的那很正常，因为这是我的想法，如果您觉得您
-    
-    </summary>
-    
-    
-  </entry>
+    <div class="waves-block waves-effect next">
+      <a href="/2017/05/08/20170509/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hexo Github Page配置简介</h4>
+      </a>
+    </div>
   
-  <entry>
-    <title>为什么有些技术人员不写博客？</title>
-    <link href="http://www.imxian.cn/2017/04/20/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E6%8A%80%E6%9C%AF%E4%BA%BA%E5%91%98%E4%B8%8D%E5%86%99%E5%8D%9A%E5%AE%A2%EF%BC%9F/"/>
-    <id>http://www.imxian.cn/2017/04/20/为什么有些技术人员不写博客？/</id>
-    <published>2017-04-20T13:20:00.000Z</published>
-    <updated>2017-05-08T14:43:26.294Z</updated>
+</nav>
+
+
+
     
-    <content type="html"><![CDATA[<blockquote>
-<p>来源： 伯乐在线 - bigship</p>
-</blockquote>
-<p>常有人跟我讨论我在blog上发布过的博文，有时候他们还希望我来撰写某些文章。在讨论的过程中，我几乎总是会问为什么你自己不开一个博客，或者为其他人的博客做些贡献呢？当我在引导他们为技术类的主题写一些博文时，极少有人对此感兴趣。   </p>
-<p>我的母亲总是告诉我（以及她的学生们）每个人都有自己的故事。她说，写作可能是一种你不曾想到过的非常有益处的行为，直到你写的东西获得了其他人的喜爱和zan同。就像软件开发者为他们的用户开发软件一样，作家为他们的读者而写作。从来都没有什么论断说技术人员无法成为激励他人学习并乐于同他人分享知识的优秀作者。   </p>
-<p>我写这篇博文的目的就是想鼓励广大的技术人员去享受写作、高效的写作，并能够从中得到乐趣。我将翻出一些我曾经最常见到的关于为什么技术人员不愿意写博客的理由。   </p>
-<h6 id="“我不认为我是某方面的专家。对于任何一个我能想到的主题，我都不是权威。”"><a href="#“我不认为我是某方面的专家。对于任何一个我能想到的主题，我都不是权威。”" class="headerlink" title="“我不认为我是某方面的专家。对于任何一个我能想到的主题，我都不是权威。”"></a>“我不认为我是某方面的专家。对于任何一个我能想到的主题，我都不是权威。”</h6><p>我首先想到的是这个理由，因为它将是我最需要去驳斥的观点。如果从这篇博文里你没有得到任何收获的话，那就记住这句话：你并不需要成为某方面的专家才能去写相关的文章。   </p>
-<p>翻翻我的博客你就能找到很多这样的例子。我自认为自己是某个方面，或者某两个方面的专家，但我在过去5年中写了超过450篇博文，我肯定不会只写我最在行的那一两个主题。写下你懂得的东西，要成为权威你就不能害怕去多做些研究。这方面有一个很好的例子就是我的一篇标题为“Kerberos for haters”的博文。我几乎没有任何有关Kerberos方面的经验。事实上，甚至在我的RHCA（RedHat系统部署工程师）认证考试中我都无法正确配置好它！但是，我对此做了相当多的研究，并开始慢慢理解了这一大坨东西是如何联系起来的。还有许多人都对Kerberos感到困惑，于是我决定将我所掌握的有关Kerberos方面的知识串接起来写成一篇博文。这篇博文引来了许多正面和负面的回复，很明显我发布的博文对一些读者起到了帮助作用，启发了一些人同时也得罪了一些人。   </p>
-<p>接下来看看下一个常遇到的理由：   </p>
-<h6 id="如果我写的东西里面有些地方是错误的怎么办？在整个互联网面前犯错，这使我看起来就像是个傻瓜。"><a href="#如果我写的东西里面有些地方是错误的怎么办？在整个互联网面前犯错，这使我看起来就像是个傻瓜。" class="headerlink" title="如果我写的东西里面有些地方是错误的怎么办？在整个互联网面前犯错，这使我看起来就像是个傻瓜。"></a>如果我写的东西里面有些地方是错误的怎么办？在整个互联网面前犯错，这使我看起来就像是个傻瓜。</h6><p>这种事我早就经历过，都已经有些厌倦了。做个不恰当的假设，每个作者都至少会犯一次错。读者们会指出你的错误（有些读者会很含蓄的指出，而有些读者不会这样），下面就是你的责任了，要么更正你的大作要么说服你的读者是他们错了。我自己也曾经发表过含有错误的博文，而且我对于时不时的要去检查这些错误显得有些懒惰。就像我中学时的新闻学老师一直教导我的：对于一个错误，最重要的部分是你要如何去更正它，并从中汲取教训。总之，你一定会犯些错误的。只要你尽心尽力的对此做研究，并尽量减少错误，及时对错误做出回应，我想读者是不会怪您的。   </p>
-<p>说到错误，这里还有一个常见的理由：</p>
-<h6 id="我技术还不错，但我的拼写和语法很糟糕，我根本不擅长写作。"><a href="#我技术还不错，但我的拼写和语法很糟糕，我根本不擅长写作。" class="headerlink" title="我技术还不错，但我的拼写和语法很糟糕，我根本不擅长写作。"></a>我技术还不错，但我的拼写和语法很糟糕，我根本不擅长写作。</h6><p>这个问题很容易解决，如果你是那种什么事情都靠自己解决的人，那就拿起这本由Strunk和White合著的《The Elements of Style  | 风格的要素》吧。网上有这本书的PDF版，或者你也可以借一本来读。无论你属于哪种情况，这本书详尽的描述了应该如何适当的加标点符号、如何组织句子和段落，以及如何正确地引用你的论点来源（对于写研究性的文章来说相当受用）。也许你并不想拿起一本如此枯燥的参考书来读，如果是这样的话，看看你身边有没有擅长写作的人。在大公司里你常常能在市场部或者公司的通讯录里找到一些愿意读你的文章并帮你做批注的伙计（谢谢你Garrett！，感谢你曾经为我修订过文章）。在 Fiverr（著名的5美元服务区，这是一个在线的信息平台，特色之处在于其收集那些价值5美元的事情，用户可以发布、接受或者分享这些信息）上我甚至找到了一些愿意以5美元的价格为我修订文章的人。   </p>
-<h6 id="我不知道该写给谁看。如果我写的东西太简单了，那些真正的技术大牛们会不会觉得我就是个小白？如果我写的东西超级复杂，大多数人都接受不了又怎么办？"><a href="#我不知道该写给谁看。如果我写的东西太简单了，那些真正的技术大牛们会不会觉得我就是个小白？如果我写的东西超级复杂，大多数人都接受不了又怎么办？" class="headerlink" title="我不知道该写给谁看。如果我写的东西太简单了，那些真正的技术大牛们会不会觉得我就是个小白？如果我写的东西超级复杂，大多数人都接受不了又怎么办？"></a>我不知道该写给谁看。如果我写的东西太简单了，那些真正的技术大牛们会不会觉得我就是个小白？如果我写的东西超级复杂，大多数人都接受不了又怎么办？</h6><p>这些我都经历过。大多数称职的Linux系统管理员都知道该如何添加和删除iptable规则，他们会觉得这是相当简单的任务。但是你知道吗，在我写过的超过450篇的博文里，这篇《deleting a single iptable rule》的访问量每个月都是排名前5！我每个月的点击量里有11%都来自这篇博文。人们要么通过这篇博文学到了一些知识，要么是他们忘记了该如何删除一条iptable规则，想通过这篇博文做快速的参考。不管如何，这篇博文对于许多人来说都是很有价值的，尽管在我看来这个主题相当的简单。反过来说，我曾经发疯写过一个完整的关于云主机冗余配置的how-to类文档，结合了LVS、glusterfs、MySQL on DRBD、memcached、haproxy以及Idirectord等各种技术。我觉得对于某些读者来说这个文档会很有价值，但肯定会搞晕绝大部分读者。事实证明我又错了，这篇博文长期占据我博客的前10名受欢迎的文章之一，通过这篇博文我收到的回复、email和IRC比其他的文章都要多。这再次证明，本是一篇我认为最没有用处的文章反倒成为了一个“话匣子”。</p>
-<p>最后，让我们总结一下，如果你对于写作感到力不从心或者觉得气馁的话，记住下面这些忠告：</p>
-<ul>
-<li>写你感兴趣的东西，不必在意你是否是专家</li>
-<li>不要害怕失败</li>
-<li>多多回复你的读者</li>
-<li>就算你觉得没人会看你写的东西，也要坚持写下去</li>
-<li>始终确保你的文章就代表着你的声音——这也是为什么写作是如此特别和吸引人的地方</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;来源： 伯乐在线 - bigship&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;常有人跟我讨论我在blog上发布过的博文，有时候他们还希望我来撰写某些文章。在讨论的过程中，我几乎总是会问为什么你自己不开一个博客，或者为其他人的博客做些贡献呢？当我在
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.imxian.cn/2016/07/27/hello-world/"/>
-    <id>http://www.imxian.cn/2016/07/27/hello-world/</id>
-    <published>2016-07-27T14:11:30.000Z</published>
-    <updated>2017-05-08T14:43:26.294Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
-  
-</feed>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Xian's Blog &copy; 2017 - 2018</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/&title=《Java面试通关要点汇总集基础篇》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/&title=《Java面试通关要点汇总集基础篇》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试通关要点汇总集基础篇》 — Xian's Blog&url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2018/05/23/Java面试通关要点汇总集基础篇/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3a0YrjMAwF0Pz/T3dfF0rTK8maycDJU2gbx8cFy0i6rvh6/XdVn0pGS0auvv3Cw8PDW+O9bq/3od/v7596n1by+/txkjnj4eHhbfPuN+Lk/v6T/C299378HA8PD+8xvDxUJAfiPBjg4eHh/S3eZBPPJ1Q91uPh4eH9Fu9UWiEfp/fsYq4FDw8PL+ZVS1lPuF+p7+Hh4eGNq+q9zb3XKDAJOR9ngoeHh7fAm7cO5KX9ajvX/QiFBAceHh7eUV6+ZSdTzDf03sE9X0Q8PDy8bd7Z0n6eCE6SC/lyFFYLDw8Pb8DLs6Dzhqr8qJ1/myQ18PDw8PZ49z/NB8oP0z12Hqjw8PDwNnjNklIrsds7xPeaGPDw8PD2ePm2W03RVsGThYhCCx4eHt4hXt4o0INFnQuD0FLuicDDw8M7xMtTukmcOfXJfHHx8PDw9nj55p4HgGrIydPBhaQzHh4e3hqvV16qvnJSNssTGR/jHh4eHt5RXrIF50NPEru9ZAceHh7e03jVsn1+nyxBNYH7pQCGh4eHd5R3/0CvqTQ/Rk+6HqLAgIeHh3eUl6dlJ+1ZvbBxIDDg4eHh/QgvDwPVhOykZSFPi1z5P4aHh4c35k0KTtXlyAtmzaQGHh4e3gIvP0DnU88P2dVSWe8Qj4eHh7fHq76m2kRVLXElrQzRouPh4eEt85IkRa8Ylk+xSsLDw8P7LV611NQ84AaH7Kt4fZkPHh4e3lHeq3hVX5YHiUnLFx4eHt5P8qqbb3W7r5b888P9qUYHPDw8vB6vlw7IX9kLHtXUcCFLjYeHh3eIdyrpUP1NEjBGFx4eHt5jeL2yWW8mo9YEPDw8vAfwcmR5Kq2EyJdx8PDw8NZ4vWREdYT7Zc3nUPir8PDw8BZ4vcNutdCVpxsmAQkPDw9vmfcPihT0UaO1iAoAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
