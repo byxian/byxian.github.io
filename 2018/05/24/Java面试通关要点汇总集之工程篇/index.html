@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Java面试通关要点汇总集工程篇 | Xian&#39;s Blog | 见贤思齐焉，见不贤而内自省也。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="参考文档：http://www.spring4all.com/article/970  工程篇需求分析你如何对需求原型进行理解和拆分http://www.woshipm.com/pmd/712972.html 说说你对功能性需求的理解https://www.zhihu.com/question/24191618 说说你对非功能性需求的理解https://www.zhihu.com/questio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试通关要点汇总集工程篇">
+<meta property="og:url" content="http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/index.html">
+<meta property="og:site_name" content="Xian&#39;s Blog">
+<meta property="og:description" content="参考文档：http://www.spring4all.com/article/970  工程篇需求分析你如何对需求原型进行理解和拆分http://www.woshipm.com/pmd/712972.html 说说你对功能性需求的理解https://www.zhihu.com/question/24191618 说说你对非功能性需求的理解https://www.zhihu.com/questio">
+<meta property="og:updated_time" content="2018-05-23T18:10:40.694Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java面试通关要点汇总集工程篇">
+<meta name="twitter:description" content="参考文档：http://www.spring4all.com/article/970  工程篇需求分析你如何对需求原型进行理解和拆分http://www.woshipm.com/pmd/712972.html 说说你对功能性需求的理解https://www.zhihu.com/question/24191618 说说你对非功能性需求的理解https://www.zhihu.com/questio">
+    
+        <link rel="alternative" href="/atom.xml" title="Xian&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Xian</h5>
+          <a href="mailto:imxian@aliyun.com" title="imxian@aliyun.com" class="mail">imxian@aliyun.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/byxian" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/5269810767" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java面试通关要点汇总集工程篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java面试通关要点汇总集工程篇</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-23T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-05-24
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#工程篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">工程篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#需求分析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">需求分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你如何对需求原型进行理解和拆分"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">你如何对需求原型进行理解和拆分</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你对功能性需求的理解"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">说说你对功能性需求的理解</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你对非功能性需求的理解"><span class="post-toc-number">1.1.0.3.</span> <span class="post-toc-text">说说你对非功能性需求的理解</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你针对产品提出哪些交互和改进意见"><span class="post-toc-number">1.1.0.4.</span> <span class="post-toc-text">你针对产品提出哪些交互和改进意见</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你如何理解用户痛点"><span class="post-toc-number">1.1.0.5.</span> <span class="post-toc-text">你如何理解用户痛点</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计能力"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">设计能力</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你在项目中使用过的-UML-图"><span class="post-toc-number">1.2.0.1.</span> <span class="post-toc-text">说说你在项目中使用过的 UML 图</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你如何考虑组件化"><span class="post-toc-number">1.2.0.2.</span> <span class="post-toc-text">你如何考虑组件化</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你如何考虑服务化"><span class="post-toc-number">1.2.0.3.</span> <span class="post-toc-text">你如何考虑服务化</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你如何进行领域建模"><span class="post-toc-number">1.2.0.4.</span> <span class="post-toc-text">你如何进行领域建模</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你如何划分领域边界"><span class="post-toc-number">1.2.0.5.</span> <span class="post-toc-text">你如何划分领域边界</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你项目中的领域建模"><span class="post-toc-number">1.2.0.6.</span> <span class="post-toc-text">说说你项目中的领域建模</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说概要设计"><span class="post-toc-number">1.2.0.7.</span> <span class="post-toc-text">说说概要设计</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计模式"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">设计模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你项目中有使用哪些设计模式"><span class="post-toc-number">1.3.0.1.</span> <span class="post-toc-text">你项目中有使用哪些设计模式</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说常用开源框架中设计模式使用分析"><span class="post-toc-number">1.3.0.2.</span> <span class="post-toc-text">说说常用开源框架中设计模式使用分析</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你对设计原则的理解"><span class="post-toc-number">1.3.0.3.</span> <span class="post-toc-text">说说你对设计原则的理解</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#23种设计模式的设计理念"><span class="post-toc-number">1.3.0.4.</span> <span class="post-toc-text">23种设计模式的设计理念</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设计模式之间的异同，例如策略模式与状态模式的区别"><span class="post-toc-number">1.3.0.5.</span> <span class="post-toc-text">设计模式之间的异同，例如策略模式与状态模式的区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设计模式之间的结合，例如策略模式-简单工厂模式的实践"><span class="post-toc-number">1.3.0.6.</span> <span class="post-toc-text">设计模式之间的结合，例如策略模式+简单工厂模式的实践</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设计模式的性能，例如单例模式哪种性能更好。"><span class="post-toc-number">1.3.0.7.</span> <span class="post-toc-text">设计模式的性能，例如单例模式哪种性能更好。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#业务工程"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">业务工程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你系统中的前后端分离是如何做的"><span class="post-toc-number">1.4.0.1.</span> <span class="post-toc-text">你系统中的前后端分离是如何做的</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你是否遇到过-内存-OOM-，如何排查与解决"><span class="post-toc-number">1.4.0.2.</span> <span class="post-toc-text">你是否遇到过 内存 OOM ，如何排查与解决</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你对敏捷开发的实践"><span class="post-toc-number">1.4.0.3.</span> <span class="post-toc-text">说说你对敏捷开发的实践</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你对开发运维的实践"><span class="post-toc-number">1.4.0.4.</span> <span class="post-toc-text">说说你对开发运维的实践</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软实力"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">软实力</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你的亮点"><span class="post-toc-number">1.5.0.1.</span> <span class="post-toc-text">说说你的亮点</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你认为的服务端开发工程师应该具备哪些能力"><span class="post-toc-number">1.5.0.2.</span> <span class="post-toc-text">说说你认为的服务端开发工程师应该具备哪些能力</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你认为的架构师是什么样的，架构师主要做什么"><span class="post-toc-number">1.5.0.3.</span> <span class="post-toc-text">说说你认为的架构师是什么样的，架构师主要做什么</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说你所理解的技术专家"><span class="post-toc-number">1.5.0.4.</span> <span class="post-toc-text">说说你所理解的技术专家</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Java面试通关要点汇总集之工程篇"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java面试通关要点汇总集工程篇</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018年05月24日 0:00" datetime="2018-05-23T16:00:00.000Z"  itemprop="datePublished">2018-05-24</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>参考文档：<a href="http://www.spring4all.com/article/970" target="_blank" rel="external">http://www.spring4all.com/article/970</a></p>
+</blockquote>
+<h2 id="工程篇"><a href="#工程篇" class="headerlink" title="工程篇"></a>工程篇</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><h5 id="你如何对需求原型进行理解和拆分"><a href="#你如何对需求原型进行理解和拆分" class="headerlink" title="你如何对需求原型进行理解和拆分"></a>你如何对需求原型进行理解和拆分</h5><p><a href="http://www.woshipm.com/pmd/712972.html" target="_blank" rel="external">http://www.woshipm.com/pmd/712972.html</a></p>
+<h5 id="说说你对功能性需求的理解"><a href="#说说你对功能性需求的理解" class="headerlink" title="说说你对功能性需求的理解"></a>说说你对功能性需求的理解</h5><p><a href="https://www.zhihu.com/question/24191618" target="_blank" rel="external">https://www.zhihu.com/question/24191618</a></p>
+<h5 id="说说你对非功能性需求的理解"><a href="#说说你对非功能性需求的理解" class="headerlink" title="说说你对非功能性需求的理解"></a>说说你对非功能性需求的理解</h5><p><a href="https://www.zhihu.com/question/24191618" target="_blank" rel="external">https://www.zhihu.com/question/24191618</a></p>
+<h5 id="你针对产品提出哪些交互和改进意见"><a href="#你针对产品提出哪些交互和改进意见" class="headerlink" title="你针对产品提出哪些交互和改进意见"></a>你针对产品提出哪些交互和改进意见</h5><p><a href="http://www.weiued.com/a/7b054284-a6ae-4b55-964b-27f209c86abb" target="_blank" rel="external">http://www.weiued.com/a/7b054284-a6ae-4b55-964b-27f209c86abb</a></p>
+<h5 id="你如何理解用户痛点"><a href="#你如何理解用户痛点" class="headerlink" title="你如何理解用户痛点"></a>你如何理解用户痛点</h5><p><a href="http://www.woshipm.com/pmd/191214.html" target="_blank" rel="external">http://www.woshipm.com/pmd/191214.html</a></p>
+<h3 id="设计能力"><a href="#设计能力" class="headerlink" title="设计能力"></a>设计能力</h3><h5 id="说说你在项目中使用过的-UML-图"><a href="#说说你在项目中使用过的-UML-图" class="headerlink" title="说说你在项目中使用过的 UML 图"></a>说说你在项目中使用过的 UML 图</h5><p><a href="http://www.uml.org.cn/oobject/200811191.asp" target="_blank" rel="external">http://www.uml.org.cn/oobject/200811191.asp</a></p>
+<h5 id="你如何考虑组件化"><a href="#你如何考虑组件化" class="headerlink" title="你如何考虑组件化"></a>你如何考虑组件化</h5><p><a href="https://yq.aliyun.com/articles/7239" target="_blank" rel="external">https://yq.aliyun.com/articles/7239</a></p>
+<h5 id="你如何考虑服务化"><a href="#你如何考虑服务化" class="headerlink" title="你如何考虑服务化"></a>你如何考虑服务化</h5><p><a href="http://www.hollischuang.com/archives/1628" target="_blank" rel="external">http://www.hollischuang.com/archives/1628</a></p>
+<h5 id="你如何进行领域建模"><a href="#你如何进行领域建模" class="headerlink" title="你如何进行领域建模"></a>你如何进行领域建模</h5><p><a href="http://www.cnblogs.com/yangjin-55/archive/2012/08/21/2786515.html" target="_blank" rel="external">http://www.cnblogs.com/yangjin-55/archive/2012/08/21/2786515.html</a></p>
+<h5 id="你如何划分领域边界"><a href="#你如何划分领域边界" class="headerlink" title="你如何划分领域边界"></a>你如何划分领域边界</h5><p><a href="http://www.cnblogs.com/daxnet/archive/2011/12/24/2300169.html" target="_blank" rel="external">http://www.cnblogs.com/daxnet/archive/2011/12/24/2300169.html</a></p>
+<h5 id="说说你项目中的领域建模"><a href="#说说你项目中的领域建模" class="headerlink" title="说说你项目中的领域建模"></a>说说你项目中的领域建模</h5><p><a href="http://www.cnblogs.com/wayfarer/p/5339134.html" target="_blank" rel="external">http://www.cnblogs.com/wayfarer/p/5339134.html</a></p>
+<h5 id="说说概要设计"><a href="#说说概要设计" class="headerlink" title="说说概要设计"></a>说说概要设计</h5><p><a href="https://baike.baidu.com/item/%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1" target="_blank" rel="external">https://baike.baidu.com/item/%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1</a></p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><h5 id="你项目中有使用哪些设计模式"><a href="#你项目中有使用哪些设计模式" class="headerlink" title="你项目中有使用哪些设计模式"></a>你项目中有使用哪些设计模式</h5><p><a href="http://blog.sina.com.cn/s/blog_155bb57fe0102w9z7.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_155bb57fe0102w9z7.html</a></p>
+<h5 id="说说常用开源框架中设计模式使用分析"><a href="#说说常用开源框架中设计模式使用分析" class="headerlink" title="说说常用开源框架中设计模式使用分析"></a>说说常用开源框架中设计模式使用分析</h5><p><a href="http://www.spring4all.com/article/507" target="_blank" rel="external">http://www.spring4all.com/article/507</a></p>
+<h5 id="说说你对设计原则的理解"><a href="#说说你对设计原则的理解" class="headerlink" title="说说你对设计原则的理解"></a>说说你对设计原则的理解</h5><p><a href="http://www.cnblogs.com/areliang/archive/2006/03/07/345111.html" target="_blank" rel="external">http://www.cnblogs.com/areliang/archive/2006/03/07/345111.html</a></p>
+<h5 id="23种设计模式的设计理念"><a href="#23种设计模式的设计理念" class="headerlink" title="23种设计模式的设计理念"></a>23种设计模式的设计理念</h5><p><a href="http://www.cnblogs.com/pony1223/p/7608955.html" target="_blank" rel="external">http://www.cnblogs.com/pony1223/p/7608955.html</a></p>
+<h5 id="设计模式之间的异同，例如策略模式与状态模式的区别"><a href="#设计模式之间的异同，例如策略模式与状态模式的区别" class="headerlink" title="设计模式之间的异同，例如策略模式与状态模式的区别"></a>设计模式之间的异同，例如策略模式与状态模式的区别</h5><p><a href="http://www.blogjava.net/4cai/archive/2014/05/16/413717.html" target="_blank" rel="external">http://www.blogjava.net/4cai/archive/2014/05/16/413717.html</a></p>
+<h5 id="设计模式之间的结合，例如策略模式-简单工厂模式的实践"><a href="#设计模式之间的结合，例如策略模式-简单工厂模式的实践" class="headerlink" title="设计模式之间的结合，例如策略模式+简单工厂模式的实践"></a>设计模式之间的结合，例如策略模式+简单工厂模式的实践</h5><p><a href="http://www.cnblogs.com/skychen1218/p/4770876.html" target="_blank" rel="external">http://www.cnblogs.com/skychen1218/p/4770876.html</a></p>
+<h5 id="设计模式的性能，例如单例模式哪种性能更好。"><a href="#设计模式的性能，例如单例模式哪种性能更好。" class="headerlink" title="设计模式的性能，例如单例模式哪种性能更好。"></a>设计模式的性能，例如单例模式哪种性能更好。</h5><p><a href="https://www.tuicool.com/articles/NVza2am" target="_blank" rel="external">https://www.tuicool.com/articles/NVza2am</a></p>
+<h3 id="业务工程"><a href="#业务工程" class="headerlink" title="业务工程"></a>业务工程</h3><h5 id="你系统中的前后端分离是如何做的"><a href="#你系统中的前后端分离是如何做的" class="headerlink" title="你系统中的前后端分离是如何做的"></a>你系统中的前后端分离是如何做的</h5><p>说说你的开发流程<br>你和团队是如何沟通的<br>你如何进行代码评审<br>说说你对技术与业务的理解<br>说说你在项目中经常遇到的 Exception<br>说说你在项目中遇到感觉最难Bug，怎么解决的<br>说说你在项目中遇到印象最深困难，怎么解决的<br>你觉得你们项目还有哪些不足的地方<br>你是否遇到过 CPU 100% ，如何排查与解决<br><a href="https://yq.aliyun.com/wenji/194955" target="_blank" rel="external">https://yq.aliyun.com/wenji/194955</a></p>
+<h5 id="你是否遇到过-内存-OOM-，如何排查与解决"><a href="#你是否遇到过-内存-OOM-，如何排查与解决" class="headerlink" title="你是否遇到过 内存 OOM ，如何排查与解决"></a>你是否遇到过 内存 OOM ，如何排查与解决</h5><p><a href="http://www.cnblogs.com/ThinkVenus/p/6805495.html" target="_blank" rel="external">http://www.cnblogs.com/ThinkVenus/p/6805495.html</a></p>
+<h5 id="说说你对敏捷开发的实践"><a href="#说说你对敏捷开发的实践" class="headerlink" title="说说你对敏捷开发的实践"></a>说说你对敏捷开发的实践</h5><p><a href="https://zhuanlan.zhihu.com/youdaonote/19571416" target="_blank" rel="external">https://zhuanlan.zhihu.com/youdaonote/19571416</a></p>
+<h5 id="说说你对开发运维的实践"><a href="#说说你对开发运维的实践" class="headerlink" title="说说你对开发运维的实践"></a>说说你对开发运维的实践</h5><p><a href="https://wenku.baidu.com/view/99e53876b9f3f90f77c61b8d.html" target="_blank" rel="external">https://wenku.baidu.com/view/99e53876b9f3f90f77c61b8d.html</a></p>
+<p>介绍下工作中的一个对自己最有价值的项目，以及在这个过程中的角色</p>
+<h3 id="软实力"><a href="#软实力" class="headerlink" title="软实力"></a>软实力</h3><h5 id="说说你的亮点"><a href="#说说你的亮点" class="headerlink" title="说说你的亮点"></a>说说你的亮点</h5><p>说说你最近在看什么书<br>说说你觉得最有意义的技术书籍<br>工作之余做什么事情<br>说说个人发展方向方面的思考<br><a href="http://www.cnblogs.com/brucewangxin/archive/2013/02/08/2909342.html" target="_blank" rel="external">http://www.cnblogs.com/brucewangxin/archive/2013/02/08/2909342.html</a></p>
+<h5 id="说说你认为的服务端开发工程师应该具备哪些能力"><a href="#说说你认为的服务端开发工程师应该具备哪些能力" class="headerlink" title="说说你认为的服务端开发工程师应该具备哪些能力"></a>说说你认为的服务端开发工程师应该具备哪些能力</h5><p><a href="https://yq.aliyun.com/articles/88423" target="_blank" rel="external">https://yq.aliyun.com/articles/88423</a></p>
+<h5 id="说说你认为的架构师是什么样的，架构师主要做什么"><a href="#说说你认为的架构师是什么样的，架构师主要做什么" class="headerlink" title="说说你认为的架构师是什么样的，架构师主要做什么"></a>说说你认为的架构师是什么样的，架构师主要做什么</h5><p><a href="https://www.zhihu.com/question/43515235" target="_blank" rel="external">https://www.zhihu.com/question/43515235</a></p>
+<h5 id="说说你所理解的技术专家"><a href="#说说你所理解的技术专家" class="headerlink" title="说说你所理解的技术专家"></a>说说你所理解的技术专家</h5><p><a href="https://www.zhihu.com/question/43515235" target="_blank" rel="external">https://www.zhihu.com/question/43515235</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-23T18:10:40.694Z" itemprop="dateUpdated">2018年5月24日 2:10</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2018/05/24/Java面试通关要点汇总集之工程篇/" target="_blank" rel="external">http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/</a>
+    </div>
+    <footer>
+        <a href="http://www.imxian.cn">
+            <img src="/img/avatar.jpg" alt="Xian">
+            Xian
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/&title=《Java面试通关要点汇总集工程篇》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/&title=《Java面试通关要点汇总集工程篇》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试通关要点汇总集工程篇》 — Xian's Blog&url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/24/Java面试通关要点汇总集之微服务篇/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Java面试通关要点汇总集微服务篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Xian's Blog &copy; 2017 - 2018</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/&title=《Java面试通关要点汇总集工程篇》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/&title=《Java面试通关要点汇总集工程篇》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试通关要点汇总集工程篇》 — Xian's Blog&url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之工程篇/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3aQW7bQAwF0Nz/0u02QCv3f3LGcYGnVeA4Iz4tRIbk11d8/frjevr8+2+/f+f1OU/3evrk8IWHh4e3Dj1nvCY9nZPjZ/Hg4eHhvYf39EZtg3j9/fy9ncTwOmY8PDy8z+G1SWX2gJIiGw8PD+//4s3SSRJQmyTw8PDwfoqXl7abxHCvHXyg14KHh4fXVa3RFOlzfr4y38PDw8NbT9XzF+6s8D07GPtLtHh4eHgXePkLNx9xvS6X2wK6LZfx8PDw3s9rQ2lhp1ay8n8A8PDw8O7xZiOuWWcgH6rlpXyTK/Dw8PDO8PIkkYz821d5kjbyVISHh4d3jzcLaFPm5sEdmOzh4eHhvXFpYJYM8lQxe/RJ+xgPDw/vPbxZWLO1gLzB0T6UYnUADw8P7zKvLYLbMVjbrm1XEPDw8PDu8fIWw+ZxtKV2u5yKh4eHd5s3e2XPHsc+bdSDOjw8PLwLvNlxs/TQlst58yLqUuPh4eEd4m0K2fZmbdt3tlLwjwYuHh4e3jXe2aF+2/BNUkg0AMPDw8O7wJsN+/M0kDeCTyWMokuNh4eHt+BtGgFtYmhXEA4kBjw8PLyjvM1oarankBfQeSkf7UTg4eHhHeLl46i2TZCkhNlC1bHCGg8PD2/B2xy3GXrNmh1tsY6Hh4d3m7dptm7OyXsn9WoXHh4e3tt5Sej5MsEME/Whk44LHh4e3lHeZtp+avVqk0IeP8HDw8M7ypu1U9tA8zZHEnTyV3h4eHj3eJuxfd7YnVHbO67aH3h4eHglr12fakvk/WitbXxEnWY8PDy8NW824N+M+dtFhOGFh4eH9wG8JDG0zYV9Gni8Ox4eHt7H8NqFg/0yVr1uhYeHh3eZ1w6xknPyAr19cMXJeHh4eBd47X/0+fB+/ziOtSTw8PDwzvB+A6w/c6hG5dydAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
