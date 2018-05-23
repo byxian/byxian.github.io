@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/index.html">
 <meta property="og:site_name" content="Xian&#39;s Blog">
 <meta property="og:description" content="参考文档：http://www.spring4all.com/article/951  框架篇SpringBeanFactory 和 ApplicationContext 有什么区别BeanFactory 可以理解为含有bean集合的工厂类。BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。BeanFactory还能在实例化对象的时生成协作类之间的关">
-<meta property="og:updated_time" content="2018-05-23T17:39:52.205Z">
+<meta property="og:updated_time" content="2018-05-23T18:00:06.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试通关要点汇总集框架篇">
 <meta name="twitter:description" content="参考文档：http://www.spring4all.com/article/951  框架篇SpringBeanFactory 和 ApplicationContext 有什么区别BeanFactory 可以理解为含有bean集合的工厂类。BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。BeanFactory还能在实例化对象的时生成协作类之间的关">
@@ -214,7 +214,7 @@
 <h5 id="Netty-线程模型"><a href="#Netty-线程模型" class="headerlink" title="Netty 线程模型"></a>Netty 线程模型</h5><p>首先，Netty使用EventLoop来处理连接上的读写事件，而一个连接上的所有请求都保证在一个EventLoop中被处理，一个EventLoop中只有一个Thread，所以也就实现了一个连接上的所有事件只会在一个线程中被执行。一个EventLoopGroup包含多个EventLoop，可以把一个EventLoop当做是Reactor线程模型中的一个线程，而一个EventLoopGroup类似于一个ExecutorService<br>作者：一字马胡<br>链接：<a href="https://www.jianshu.com/p/128ddc36e713" target="_blank" rel="external">https://www.jianshu.com/p/128ddc36e713</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h5 id="说说-Netty-的零拷贝"><a href="#说说-Netty-的零拷贝" class="headerlink" title="说说 Netty 的零拷贝"></a>说说 Netty 的零拷贝</h5><p>“零拷贝”是指计算机操作的过程中，CPU不需要为数据在内存之间的拷贝消耗资源。而它通常是指计算机在网络上发送文件时，不需要将文件内容拷贝到用户空间（User Space）而直接在内核空间（Kernel Space）中传输到网络的方式。</p>
 <h5 id="Netty-内部执行流程"><a href="#Netty-内部执行流程" class="headerlink" title="Netty 内部执行流程"></a>Netty 内部执行流程</h5><p>Netty的接收和发送ByteBuffer采用DIRECT BUFFERS，使用堆外直接内存进行Socket读写，不需要进行字节缓冲区的二次拷贝。如果使用传统的堆内存（HEAP BUFFERS）进行Socket读写，JVM会将堆内存Buffer拷贝一份到直接内存中，然后才写入Socket中。相比于堆外直接内存，消息在发送过程中多了一次缓冲区的内存拷贝。<br>Netty提供了组合Buffer对象，可以聚合多个ByteBuffer对象，用户可以像操作一个Buffer那样方便的对组合Buffer进行操作，避免了传统通过内存拷贝的方式将几个小Buffer合并成一个大的Buffer。<br>Netty的文件传输采用了transferTo方法，它可以直接将文件缓冲区的数据发送到目标Channel，避免了传统通过循环write方式导致的内存拷贝问题。<br>摘抄自：<a href="http://blog.onlycatch.com/post/Netty%E4%B8%AD%E7%9A%84%E9%9B%B6%E6%8B%B7%E8%B4%9D" target="_blank" rel="external">http://blog.onlycatch.com/post/Netty%E4%B8%AD%E7%9A%84%E9%9B%B6%E6%8B%B7%E8%B4%9D</a></p>
-<h5 id="Netty-重连实现"><a href="#Netty-重连实现" class="headerlink" title="Netty 重连实现"></a>Netty 重连实现</h5><p>.心跳机制检测连接存活<br>2.启动时连接重试<br>3.运行中连接断开时重试<br>摘抄自：<a href="http://www.spring4all.com/article/889" target="_blank" rel="external">http://www.spring4all.com/article/889</a></p>
+<h5 id="Netty-重连实现"><a href="#Netty-重连实现" class="headerlink" title="Netty 重连实现"></a>Netty 重连实现</h5><p>1.心跳机制检测连接存活<br>2.启动时连接重试<br>3.运行中连接断开时重试<br>摘抄自：<a href="http://www.spring4all.com/article/889" target="_blank" rel="external">http://www.spring4all.com/article/889</a></p>
 
         </div>
 
@@ -222,7 +222,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-05-23T17:39:52.205Z" itemprop="dateUpdated">2018年5月24日 1:39</time>
+    最后更新时间：<time datetime="2018-05-23T18:00:06.027Z" itemprop="dateUpdated">2018年5月24日 2:00</time>
 </span><br>
 
 
