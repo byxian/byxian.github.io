@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Java面试通关要点汇总集框架篇 | Xian&#39;s Blog | 见贤思齐焉，见不贤而内自省也。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="参考文档：http://www.spring4all.com/article/951  框架篇SpringBeanFactory 和 ApplicationContext 有什么区别BeanFactory 可以理解为含有bean集合的工厂类。BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。BeanFactory还能在实例化对象的时生成协作类之间的关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试通关要点汇总集框架篇">
+<meta property="og:url" content="http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/index.html">
+<meta property="og:site_name" content="Xian&#39;s Blog">
+<meta property="og:description" content="参考文档：http://www.spring4all.com/article/951  框架篇SpringBeanFactory 和 ApplicationContext 有什么区别BeanFactory 可以理解为含有bean集合的工厂类。BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。BeanFactory还能在实例化对象的时生成协作类之间的关">
+<meta property="og:updated_time" content="2018-05-23T17:39:52.205Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java面试通关要点汇总集框架篇">
+<meta name="twitter:description" content="参考文档：http://www.spring4all.com/article/951  框架篇SpringBeanFactory 和 ApplicationContext 有什么区别BeanFactory 可以理解为含有bean集合的工厂类。BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。BeanFactory还能在实例化对象的时生成协作类之间的关">
+    
+        <link rel="alternative" href="/atom.xml" title="Xian&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.8">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Xian</h5>
+          <a href="mailto:imxian@aliyun.com" title="imxian@aliyun.com" class="mail">imxian@aliyun.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/byxian" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/5269810767" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java面试通关要点汇总集框架篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java面试通关要点汇总集框架篇</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-23T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2018-05-24
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#框架篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">框架篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Spring</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#BeanFactory-和-ApplicationContext-有什么区别"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">BeanFactory 和 ApplicationContext 有什么区别</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-Bean-的生命周期"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">Spring Bean 的生命周期</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-IOC-如何实现"><span class="post-toc-number">1.1.0.3.</span> <span class="post-toc-text">Spring IOC 如何实现</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-Spring-AOP"><span class="post-toc-number">1.1.0.4.</span> <span class="post-toc-text">说说 Spring AOP</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-AOP-实现原理"><span class="post-toc-number">1.1.0.5.</span> <span class="post-toc-text">Spring AOP 实现原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#动态代理（cglib-与-JDK）"><span class="post-toc-number">1.1.0.6.</span> <span class="post-toc-text">动态代理（cglib 与 JDK）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-事务实现方式"><span class="post-toc-number">1.1.0.7.</span> <span class="post-toc-text">Spring 事务实现方式</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-事务底层原理"><span class="post-toc-number">1.1.0.8.</span> <span class="post-toc-text">Spring 事务底层原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#如何自定义注解实现功能"><span class="post-toc-number">1.1.0.9.</span> <span class="post-toc-text">如何自定义注解实现功能</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-MVC-运行流程"><span class="post-toc-number">1.1.0.10.</span> <span class="post-toc-text">Spring MVC 运行流程</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-MVC-启动流程"><span class="post-toc-number">1.1.0.11.</span> <span class="post-toc-text">Spring MVC 启动流程</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-的单例实现原理"><span class="post-toc-number">1.1.0.12.</span> <span class="post-toc-text">Spring 的单例实现原理</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Spring-框架中用到了哪些设计模式"><span class="post-toc-number">1.1.0.13.</span> <span class="post-toc-text">Spring 框架中用到了哪些设计模式</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Netty"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Netty</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#为什么选择-Netty"><span class="post-toc-number">1.2.0.1.</span> <span class="post-toc-text">为什么选择 Netty</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说业务中，Netty-的使用场景"><span class="post-toc-number">1.2.0.2.</span> <span class="post-toc-text">说说业务中，Netty 的使用场景</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#原生的-NIO-在-JDK-1-7-版本存在-epoll-bug"><span class="post-toc-number">1.2.0.3.</span> <span class="post-toc-text">原生的 NIO 在 JDK 1.7 版本存在 epoll bug</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#什么是TCP-粘包-拆包"><span class="post-toc-number">1.2.0.4.</span> <span class="post-toc-text">什么是TCP 粘包/拆包</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#TCP粘包-拆包的解决办法"><span class="post-toc-number">1.2.0.5.</span> <span class="post-toc-text">TCP粘包/拆包的解决办法</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Netty-线程模型"><span class="post-toc-number">1.2.0.6.</span> <span class="post-toc-text">Netty 线程模型</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#说说-Netty-的零拷贝"><span class="post-toc-number">1.2.0.7.</span> <span class="post-toc-text">说说 Netty 的零拷贝</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Netty-内部执行流程"><span class="post-toc-number">1.2.0.8.</span> <span class="post-toc-text">Netty 内部执行流程</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Netty-重连实现"><span class="post-toc-number">1.2.0.9.</span> <span class="post-toc-text">Netty 重连实现</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Java面试通关要点汇总集之框架篇"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java面试通关要点汇总集框架篇</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018年05月24日 0:00" datetime="2018-05-23T16:00:00.000Z"  itemprop="datePublished">2018-05-24</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>参考文档：<a href="http://www.spring4all.com/article/951" target="_blank" rel="external">http://www.spring4all.com/article/951</a></p>
+</blockquote>
+<h2 id="框架篇"><a href="#框架篇" class="headerlink" title="框架篇"></a>框架篇</h2><h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><h5 id="BeanFactory-和-ApplicationContext-有什么区别"><a href="#BeanFactory-和-ApplicationContext-有什么区别" class="headerlink" title="BeanFactory 和 ApplicationContext 有什么区别"></a>BeanFactory 和 ApplicationContext 有什么区别</h5><p>BeanFactory 可以理解为含有bean集合的工厂类。<br>BeanFactory 包含了种bean的定义，以便在接收到客户端请求时将对应的bean实例化。<br>BeanFactory还能在实例化对象的时生成协作类之间的关系。此举将bean自身与bean客户端的配置中解放出来。BeanFactory还包含了bean生命周期的控制，调用客户端的初始化方法（initialization methods）和销毁方法（destruction methods）。<br>从表面上看，application context如同bean factory一样具有bean定义、bean关联关系的设置，根据请求分发bean的功能。但application context在此基础上还提供了其他的功能。<br>提供了支持国际化的文本消息<br>统一的资源文件读取方式<br>已在监听器中注册的bean的事件<br>摘抄自： <a href="http://www.importnew.com/15851.html" target="_blank" rel="external">http://www.importnew.com/15851.html</a></p>
+<h5 id="Spring-Bean-的生命周期"><a href="#Spring-Bean-的生命周期" class="headerlink" title="Spring Bean 的生命周期"></a>Spring Bean 的生命周期</h5><p>Spring Bean的生命周期简单易懂。在一个bean实例被初始化时，需要执行一系列的初始化操作以达到可用的状态。同样的，当一个bean不在被调用时需要进行相关的析构操作，并从bean容器中移除。<br>Spring bean factory 负责管理在spring容器中被创建的bean的生命周期。Bean的生命周期由两组回调（call back）方法组成。<br>初始化之后调用的回调方法。<br>销毁之前调用的回调方法。<br>Spring框架提供了以下四种方式来管理bean的生命周期事件：<br>InitializingBean和DisposableBean回调接口<br>针对特殊行为的其他Aware接口<br>Bean配置文件中的Custom init()方法和destroy()方法<br>@PostConstruct和@PreDestroy注解方式<br>摘抄自： <a href="http://www.importnew.com/15851.html" target="_blank" rel="external">http://www.importnew.com/15851.html</a></p>
+<h5 id="Spring-IOC-如何实现"><a href="#Spring-IOC-如何实现" class="headerlink" title="Spring IOC 如何实现"></a>Spring IOC 如何实现</h5><p>Spring中的 org.springframework.beans 包和 org.springframework.context包构成了Spring框架IoC容器的基础。<br>BeanFactory 接口提供了一个先进的配置机制，使得任何类型的对象的配置成为可能。ApplicationContex接口对BeanFactory（是一个子接口）进行了扩展，在BeanFactory的基础上添加了其他功能，比如与Spring的AOP更容易集成，也提供了处理message resource的机制（用于国际化）、事件传播以及应用层的特别配置，比如针对Web应用的WebApplicationContext。<br>org.springframework.beans.factory.BeanFactory 是Spring IoC容器的具体实现，用来包装和管理前面提到的各种bean。BeanFactory接口是Spring IoC 容器的核心接口。</p>
+<h5 id="说说-Spring-AOP"><a href="#说说-Spring-AOP" class="headerlink" title="说说 Spring AOP"></a>说说 Spring AOP</h5><p>面向切面编程，在我们的应用中，经常需要做一些事情，但是这些事情与核心业务无关，比如，要记录所有update方法的执行时间时间，操作人等等信息，记录到日志，<br>通过spring的AOP技术，就可以在不修改update的代码的情况下完成该需求。</p>
+<h5 id="Spring-AOP-实现原理"><a href="#Spring-AOP-实现原理" class="headerlink" title="Spring AOP 实现原理"></a>Spring AOP 实现原理</h5><p>Spring AOP中的动态代理主要有两种方式，JDK动态代理和CGLIB动态代理。JDK动态代理通过反射来接收被代理的类，并且要求被代理的类必须实现一个接口。JDK动态代理的核心是InvocationHandler接口和Proxy类。<br>如果目标类没有实现接口，那么Spring AOP会选择使用CGLIB来动态代理目标类。CGLIB（Code Generation Library），是一个代码生成的类库，可以在运行时动态的生成某个类的子类，注意，CGLIB是通过继承的方式做的动态代理，因此如果某个类被标记为final，那么它是无法使用CGLIB做动态代理的。</p>
+<h5 id="动态代理（cglib-与-JDK）"><a href="#动态代理（cglib-与-JDK）" class="headerlink" title="动态代理（cglib 与 JDK）"></a>动态代理（cglib 与 JDK）</h5><p>JDK 动态代理类和委托类需要都实现同一个接口。也就是说只有实现了某个接口的类可以使用Java动态代理机制。但是，事实上使用中并不是遇到的所有类都会给你实现一个接口。因此，对于没有实现接口的类，就不能使用该机制。而CGLIB则可以实现对类的动态代理。<br>摘抄自： <a href="http://www.importnew.com/22015.html" target="_blank" rel="external">http://www.importnew.com/22015.html</a></p>
+<h5 id="Spring-事务实现方式"><a href="#Spring-事务实现方式" class="headerlink" title="Spring 事务实现方式"></a>Spring 事务实现方式</h5><p>1、编码方式<br>所谓编程式事务指的是通过编码方式实现事务，即类似于JDBC编程实现事务管理。<br>2、声明式事务管理方式<br>声明式事务管理又有两种实现方式：基于xml配置文件的方式；另一个实在业务方法上进行@Transaction注解，将事务规则应用到业务逻辑中</p>
+<h5 id="Spring-事务底层原理"><a href="#Spring-事务底层原理" class="headerlink" title="Spring 事务底层原理"></a>Spring 事务底层原理</h5><p>a、划分处理单元——IOC<br>由于spring解决的问题是对单个数据库进行局部事务处理的，具体的实现首相用spring中的IOC划分了事务处理单元。并且将对事务的各种配置放到了ioc容器中（设置事务管理器，设置事务的传播特性及隔离机制）。<br>b、AOP拦截需要进行事务处理的类<br>Spring事务处理模块是通过AOP功能来实现声明式事务处理的，具体操作（比如事务实行的配置和读取，事务对象的抽象），用TransactionProxyFactoryBean接口来使用AOP功能，生成proxy代理对象，通过TransactionInterceptor完成对代理方法的拦截，将事务处理的功能编织到拦截的方法中。读取ioc容器事务配置属性，转化为spring事务处理需要的内部数据结构（TransactionAttributeSourceAdvisor），转化为TransactionAttribute表示的数据对象。<br>c、对事物处理实现（事务的生成、提交、回滚、挂起）<br>spring委托给具体的事务处理器实现。实现了一个抽象和适配。适配的具体事务处理器：DataSource数据源支持、hibernate数据源事务处理支持、JDO数据源事务处理支持，JPA、JTA数据源事务处理支持。这些支持都是通过设计PlatformTransactionManager、AbstractPlatforTransaction一系列事务处理的支持。 为常用数据源支持提供了一系列的TransactionManager。<br>d、结合<br>PlatformTransactionManager实现了TransactionInterception接口，让其与TransactionProxyFactoryBean结合起来，形成一个Spring声明式事务处理的设计体系。</p>
+<h5 id="如何自定义注解实现功能"><a href="#如何自定义注解实现功能" class="headerlink" title="如何自定义注解实现功能"></a>如何自定义注解实现功能</h5><p>创建自定义注解和创建一个接口相似，但是注解的interface关键字需要以@符号开头。<br>注解方法不能带有参数；<br>注解方法返回值类型限定为：基本类型、String、Enums、Annotation或者是这些类型的数组；<br>注解方法可以有默认值；<br>注解本身能够包含元注解，元注解被用来注解其它注解。<br>摘抄自：<a href="http://www.importnew.com/20286.html" target="_blank" rel="external">http://www.importnew.com/20286.html</a></p>
+<h5 id="Spring-MVC-运行流程"><a href="#Spring-MVC-运行流程" class="headerlink" title="Spring MVC 运行流程"></a>Spring MVC 运行流程</h5><p>1.spring mvc将所有的请求都提交给DispatcherServlet,它会委托应用系统的其他模块负责对请求 进行真正的处理工作。<br>2.DispatcherServlet查询一个或多个HandlerMapping,找到处理请求的Controller.<br>3.DispatcherServlet请请求提交到目标Controller<br>4.Controller进行业务逻辑处理后，会返回一个ModelAndView<br>5.Dispathcher查询一个或多个ViewResolver视图解析器,找到ModelAndView对象指定的视图对象<br>6.视图对象负责渲染返回给客户端。<br>摘抄自：<a href="http://blog.csdn.net/liangzi_lucky/article/details/52459378" target="_blank" rel="external">http://blog.csdn.net/liangzi_lucky/article/details/52459378</a></p>
+<h5 id="Spring-MVC-启动流程"><a href="#Spring-MVC-启动流程" class="headerlink" title="Spring MVC 启动流程"></a>Spring MVC 启动流程</h5><p>在 web.xml 文件中给 Spring MVC 的 Servlet 配置了 load-on-startup,所以程序启动的<br>时候会初始化 Spring MVC，在 HttpServletBean 中将配置的 contextConfigLocation<br>属性设置到 Servlet 中，然后在 FrameworkServlet 中创建了 WebApplicationContext,<br>DispatcherServlet 根据 contextConfigLocation 配置的 classpath 下的 xml 文件初始化了<br>Spring MVC 总的组件。<br>摘自： 《SpringMVC 源代码分析与实践》</p>
+<h5 id="Spring-的单例实现原理"><a href="#Spring-的单例实现原理" class="headerlink" title="Spring 的单例实现原理"></a>Spring 的单例实现原理</h5><p>Spring 对 Bean 实例的创建是采用单例注册表的方式进行实现的，而这个注册表的缓存是 ConcurrentHashMap 对象。<br>摘抄自：<a href="http://blog.720ui.com/2017/design_pattern_singleton_reg/" target="_blank" rel="external">http://blog.720ui.com/2017/design_pattern_singleton_reg/</a></p>
+<h5 id="Spring-框架中用到了哪些设计模式"><a href="#Spring-框架中用到了哪些设计模式" class="headerlink" title="Spring 框架中用到了哪些设计模式"></a>Spring 框架中用到了哪些设计模式</h5><p>代理模式—在AOP和remoting中被用的比较多。<br>单例模式—在spring配置文件中定义的bean默认为单例模式。<br>模板方法—用来解决代码重复的问题。比如. RestTemplate, JmsTemplate, JpaTemplate。<br>前端控制器—Spring提供了DispatcherServlet来对请求进行分发。<br>视图帮助(View Helper )—Spring提供了一系列的JSP标签，高效宏来辅助将分散的代码整合在视图里。<br>依赖注入—贯穿于BeanFactory / ApplicationContext接口的核心理念。<br>工厂模式—BeanFactory用来创建对象的实例。<br>摘抄自： <a href="http://www.importnew.com/15851.html#design_patterns_used_in_spring" target="_blank" rel="external">http://www.importnew.com/15851.html#design_patterns_used_in_spring</a></p>
+<p>Spring 其他产品（Srping Boot、Spring Cloud、Spring Secuirity、Spring Data、Spring AMQP 等）</p>
+<h3 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h3><h5 id="为什么选择-Netty"><a href="#为什么选择-Netty" class="headerlink" title="为什么选择 Netty"></a>为什么选择 Netty</h5><p>1) API使用简单，开发门槛低；<br>2) 功能强大，预置了多种编解码功能，支持多种主流协议；<br>3) 定制能力强，可以通过 ChannelHandler 对通信框架进行灵活的扩展；<br>4) 性能高，通过与其它业界主流的NIO框架对比，Netty的综合性能最优；<br>5) 成熟、稳定，Netty修复了已经发现的所有JDK NIO BUG，业务开发人员不需要再为NIO的BUG而烦恼；<br>6) 社区活跃，版本迭代周期短，发现的BUG可以被及时修复，同时，更多的新功能会被加入；<br>7) 经历了大规模的商业应用考验，质量已经得到验证。在互联网、大数据、网络游戏、企业应用、电信软件等众多行业得到成功商用，证明了它可以完全满足不同行业的商业应用。<br>正是因为这些优点，Netty逐渐成为Java NIO编程的首选框架。<br>摘抄自：<a href="http://ifeve.com/netty-2-6/" target="_blank" rel="external">http://ifeve.com/netty-2-6/</a></p>
+<h5 id="说说业务中，Netty-的使用场景"><a href="#说说业务中，Netty-的使用场景" class="headerlink" title="说说业务中，Netty 的使用场景"></a>说说业务中，Netty 的使用场景</h5><p>构建高性能、低时延的各种Java中间件，例如MQ、分布式服务框架、ESB消息总线等，Netty主要作为基础通信框架提供高性能、低时延的通信服务；<br>公有或者私有协议栈的基础通信框架，例如可以基于Netty构建异步、高性能的WebSocket协议栈；<br>各领域应用，例如大数据、游戏等，Netty作为高性能的通信框架用于内部各模块的数据分发、传输和汇总等，实现模块之间高性能通信。<br>摘抄自：<a href="http://www.voidcn.com/article/p-xydqhgxk-uk.html" target="_blank" rel="external">http://www.voidcn.com/article/p-xydqhgxk-uk.html</a></p>
+<h5 id="原生的-NIO-在-JDK-1-7-版本存在-epoll-bug"><a href="#原生的-NIO-在-JDK-1-7-版本存在-epoll-bug" class="headerlink" title="原生的 NIO 在 JDK 1.7 版本存在 epoll bug"></a>原生的 NIO 在 JDK 1.7 版本存在 epoll bug</h5><p>它会导致Selector空轮询，最终导致CPU 100%。官方声称在JDK 1.6版本的update18修复了该问题，但是直到JDK 1.7版本该问题仍旧存在，只不过该BUG发生概率降低了一些而已，它并没有得到根本性解决。<br>摘抄自： <a href="http://blog.csdn.net/broadview2006/article/details/46041995" target="_blank" rel="external">http://blog.csdn.net/broadview2006/article/details/46041995</a></p>
+<h5 id="什么是TCP-粘包-拆包"><a href="#什么是TCP-粘包-拆包" class="headerlink" title="什么是TCP 粘包/拆包"></a>什么是TCP 粘包/拆包</h5><p>1、要发送的数据大于TCP发送缓冲区剩余空间大小，将会发生拆包。<br>2、待发送数据大于MSS（最大报文长度），TCP在传输前将进行拆包。<br>3、要发送的数据小于TCP发送缓冲区的大小，TCP将多次写入缓冲区的数据一次发送出去，将会发生粘包。<br>4、接收数据端的应用层没有及时读取接收缓冲区中的数据，将发生粘包。<br>摘抄自：<a href="https://blog.insanecoder.top/tcp-packet-splice-and-split-issue/" target="_blank" rel="external">https://blog.insanecoder.top/tcp-packet-splice-and-split-issue/</a></p>
+<h5 id="TCP粘包-拆包的解决办法"><a href="#TCP粘包-拆包的解决办法" class="headerlink" title="TCP粘包/拆包的解决办法"></a>TCP粘包/拆包的解决办法</h5><p>1、发送端给每个数据包添加包首部，首部中应该至少包含数据包的长度，这样接收端在接收到数据后，通过读取包首部的长度字段，便知道每一个数据包的实际长度了。<br>2、发送端将每个数据包封装为固定长度（不够的可以通过补0填充），这样接收端每次从接收缓冲区中读取固定长度的数据就自然而然的把每个数据包拆分开来。<br>3、可以在数据包之间设置边界，如添加特殊符号，这样，接收端通过这个边界就可以将不同的数据包拆分开。<br>摘抄自：<a href="https://blog.insanecoder.top/tcp-packet-splice-and-split-issue/" target="_blank" rel="external">https://blog.insanecoder.top/tcp-packet-splice-and-split-issue/</a></p>
+<h5 id="Netty-线程模型"><a href="#Netty-线程模型" class="headerlink" title="Netty 线程模型"></a>Netty 线程模型</h5><p>首先，Netty使用EventLoop来处理连接上的读写事件，而一个连接上的所有请求都保证在一个EventLoop中被处理，一个EventLoop中只有一个Thread，所以也就实现了一个连接上的所有事件只会在一个线程中被执行。一个EventLoopGroup包含多个EventLoop，可以把一个EventLoop当做是Reactor线程模型中的一个线程，而一个EventLoopGroup类似于一个ExecutorService<br>作者：一字马胡<br>链接：<a href="https://www.jianshu.com/p/128ddc36e713" target="_blank" rel="external">https://www.jianshu.com/p/128ddc36e713</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h5 id="说说-Netty-的零拷贝"><a href="#说说-Netty-的零拷贝" class="headerlink" title="说说 Netty 的零拷贝"></a>说说 Netty 的零拷贝</h5><p>“零拷贝”是指计算机操作的过程中，CPU不需要为数据在内存之间的拷贝消耗资源。而它通常是指计算机在网络上发送文件时，不需要将文件内容拷贝到用户空间（User Space）而直接在内核空间（Kernel Space）中传输到网络的方式。</p>
+<h5 id="Netty-内部执行流程"><a href="#Netty-内部执行流程" class="headerlink" title="Netty 内部执行流程"></a>Netty 内部执行流程</h5><p>Netty的接收和发送ByteBuffer采用DIRECT BUFFERS，使用堆外直接内存进行Socket读写，不需要进行字节缓冲区的二次拷贝。如果使用传统的堆内存（HEAP BUFFERS）进行Socket读写，JVM会将堆内存Buffer拷贝一份到直接内存中，然后才写入Socket中。相比于堆外直接内存，消息在发送过程中多了一次缓冲区的内存拷贝。<br>Netty提供了组合Buffer对象，可以聚合多个ByteBuffer对象，用户可以像操作一个Buffer那样方便的对组合Buffer进行操作，避免了传统通过内存拷贝的方式将几个小Buffer合并成一个大的Buffer。<br>Netty的文件传输采用了transferTo方法，它可以直接将文件缓冲区的数据发送到目标Channel，避免了传统通过循环write方式导致的内存拷贝问题。<br>摘抄自：<a href="http://blog.onlycatch.com/post/Netty%E4%B8%AD%E7%9A%84%E9%9B%B6%E6%8B%B7%E8%B4%9D" target="_blank" rel="external">http://blog.onlycatch.com/post/Netty%E4%B8%AD%E7%9A%84%E9%9B%B6%E6%8B%B7%E8%B4%9D</a></p>
+<h5 id="Netty-重连实现"><a href="#Netty-重连实现" class="headerlink" title="Netty 重连实现"></a>Netty 重连实现</h5><p>.心跳机制检测连接存活<br>2.启动时连接重试<br>3.运行中连接断开时重试<br>摘抄自：<a href="http://www.spring4all.com/article/889" target="_blank" rel="external">http://www.spring4all.com/article/889</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-23T17:39:52.205Z" itemprop="dateUpdated">2018年5月24日 1:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2018/05/24/Java面试通关要点汇总集之框架篇/" target="_blank" rel="external">http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/</a>
+    </div>
+    <footer>
+        <a href="http://www.imxian.cn">
+            <img src="/img/avatar.jpg" alt="Xian">
+            Xian
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/&title=《Java面试通关要点汇总集框架篇》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/&title=《Java面试通关要点汇总集框架篇》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试通关要点汇总集框架篇》 — Xian's Blog&url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/05/24/Java面试通关要点汇总集之核心篇/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Java面试通关要点汇总集核心篇</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/23/Java面试通关要点汇总集基础篇/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Java面试通关要点汇总集基础篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Xian's Blog &copy; 2017 - 2018</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/&title=《Java面试通关要点汇总集框架篇》 — Xian's Blog&pic=http://www.imxian.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/&title=《Java面试通关要点汇总集框架篇》 — Xian's Blog&source=见贤思齐焉，见不贤而内自省也。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试通关要点汇总集框架篇》 — Xian's Blog&url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/&via=http://www.imxian.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.imxian.cn/2018/05/24/Java面试通关要点汇总集之框架篇/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqUlEQVR42u3awU7DMBAEUP7/p+GKhAIzay8U6eVUpWnrl0q2M7tvb/Hx/uX4fP7pmqfrn979es3TmcsHHh4e3vHQ82ElP/l0O74/c208eHh4eGu8fFj5IpFM699fmbz+wYKHh4f3Arx2Ep9tvpNNNh4eHt5/4bUTfTugduHBw8PD+yte8vCfU9tBLy4teHh4eFu71qiK9DqvV+p7eHh4eMdV9XzCnW1888LY++jAw8PD2+DlE+6s3ar9bDKrt+PEw8PD2+DlYUEbTORDb5eH/AEADw8Pb4OX/1gyiNnSMvvmKJ7Aw8PDW+Yl7KTE1U7l7e8WfwkeHh7eVd5sQCfb3JMGhWHVDg8PD2+BN2saaCfxdqCz1is8PDy8v+LNSlZtM0Eb4NYbcTw8PLxf57UP/3kJLZrW45tVt1vh4eHhHfDa4tMs0j3ZarfNqXh4eHjbvNl0n7cU5EtL224VvYuHh4e3wDuPUNsS1ywmvlWEw8PDwzvntbFCHrm2A22Xgeh24OHh4S3z2l6mk21unZTE70YFMDw8PLxj3iximBW9Zq0Aw4YGPDw8vF/kbce1s6auawsDHh4e3qUtdb7NnQUH5+lyfdPx8PDwFnht6WvWXjB7N7myvmV4eHh4a7y8ISDfKLeb4zaSiJoV8PDw8C7xZpvp/M5tlNnqfwwPDw9vgZeXoPLSfvvZWcNBkbjg4eHhXeXNItfzkDea3IMl5PEMHh4e3lXeScSQB6l5INtu339YzPDw8PAWeLNoIJ/i2yLWSVPCUfyBh4eHV/JmpaztJoA2jChSajw8PLxLvKSEPxtcG0CcBBN4eHh4/4V3Ei7cWgYefx0PDw/vxXgt/mTqr9ut8PDw8JZ55wMahgXlNyTLCR4eHt42r32iz4v355vma5EEHh4e3h3eB/eVAyd4QwvEAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.8"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.8" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
